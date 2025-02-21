@@ -1,6 +1,10 @@
 package net.floderfloh.gemsoftheworld;
 
 import com.mojang.logging.LogUtils;
+import net.floderfloh.gemsoftheworld.block.ModBlocks;
+import net.floderfloh.gemsoftheworld.item.ModCreativeModeTabs;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.floderfloh.gemsoftheworld.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -37,6 +41,11 @@ public class GemsOfTheWorld
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -50,7 +59,15 @@ public class GemsOfTheWorld
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.RUBY_SHARD);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.RUBY_BLOCK);
+            event.accept(ModBlocks.RUBY_SHARD_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
