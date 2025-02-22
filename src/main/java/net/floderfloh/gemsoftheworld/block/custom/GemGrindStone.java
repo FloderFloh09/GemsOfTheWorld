@@ -24,41 +24,52 @@ public class GemGrindStone extends Block {
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hitResult) {
         ItemStack heldStack = player.getItemInHand(player.getUsedItemHand());
 
-        // Definieren wir verschiedene Item-Kombinationen
-        if (!heldStack.isEmpty()) {
-            // Basis Items
-            if (heldStack.is(ModItems.RUBY.get())) {
-                processConversion(world, pos, player, heldStack, ModItems.RUBY_SHARD.get());
-                return InteractionResult.SUCCESS;
-            }
+        // Basis Items
+        if (heldStack.is(ModItems.RUBY.get())) {
+            processSingleOutputConversion(world, pos, player, heldStack, ModItems.RUBY_SHARD.get());
+            return InteractionResult.SUCCESS;
+        }
 
-            // Honigwaben-ähnliche Items
-            if (heldStack.is(ModItems.BONDED_SAPPHIRE.get())) {
-                processConversion(world, pos, player, heldStack, ModItems.SAPPHIRE.get());
-                return InteractionResult.SUCCESS;
-            }
-
-
+        // Item mit zwei Ausgaben
+        if (heldStack.is(ModItems.BONDED_SAPPHIRE.get())) {
+            processDualOutputConversion(world, pos, player, heldStack);
+            return InteractionResult.SUCCESS;
         }
 
         return InteractionResult.PASS;
     }
 
-    private void processConversion(Level world, BlockPos pos, Player player, ItemStack inputStack, Item outputItem) {
-        // Sound abspielen
+    private void processSingleOutputConversion(Level world, BlockPos pos, Player player,
+                                               ItemStack inputStack, Item outputItem) {
         world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
 
-        // Bei größeren Stacks nur ein Item umwandeln
         if (inputStack.getCount() > 1) {
             ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),
                     new ItemStack(outputItem, 1));
             world.addFreshEntity(itemEntity);
             inputStack.shrink(1);
-        }
-        // Bei einzelnen Items direkt umwandeln
-        else {
+        } else {
             player.setItemInHand(player.getUsedItemHand(),
                     new ItemStack(outputItem, 1));
         }
+    }
+
+    private void processDualOutputConversion(Level world, BlockPos pos, Player player, ItemStack inputStack) {
+        world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
+
+        // Erstes Ausgabeitem
+        ItemEntity firstItem = new ItemEntity(world, pos.getX() - 0.3, pos.getY() + 1, pos.getZ(),
+                new ItemStack(ModItems.SAPPHIRE.get(), 1));
+
+        // Zweites Ausgabeitem
+        ItemEntity secondItem = new ItemEntity(world, pos.getX() + 0.3, pos.getY() + 1, pos.getZ(),
+                new ItemStack(ModItems.MINERALS.get(), 1));
+
+        world.addFreshEntity(firstItem);
+        world.addFreshEntity(secondItem);
+
+        // Reduziere den Eingabestack um 1
+        inputStack.shrink(1);
+
     }
 }
