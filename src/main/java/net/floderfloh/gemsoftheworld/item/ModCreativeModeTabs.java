@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BONDED_SAPPHIRE.get());
                         output.accept(ModItems.JUCY_APPLE.get());
                         output.accept(ModItems.AMBER.get());
+                        output.accept(ModItems.MINERALS.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
                         output.accept(ModBlocks.RUBY_SHARD_BLOCK.get());
                         output.accept(ModBlocks.RUBY_ORE.get());

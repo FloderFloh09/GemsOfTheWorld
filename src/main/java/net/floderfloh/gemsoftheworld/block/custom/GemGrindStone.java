@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -21,36 +22,43 @@ public class GemGrindStone extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hitResult) {
-        // Holen wir uns den aktuellen Stack in der Hand
         ItemStack heldStack = player.getItemInHand(player.getUsedItemHand());
 
-        // Prüfen ob der Stack nicht leer ist und das richtige Item enthält
-        if (!heldStack.isEmpty() && heldStack.is(ModItems.RUBY.get())) {
-            // Spielen wir den Sound ab
-            world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
-
-            // Wenn der Stack mehrere Items enthält, wandeln wir nur eins um
-            if (heldStack.getCount() > 1) {
-                // Ein neuer Stack mit nur einem Item erstellen
-                ItemStack newItemStack = new ItemStack(ModItems.RUBY_SHARD.get(), 1);
-
-                // Das Item als Entity in der Welt platzieren
-                ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(), newItemStack);
-                world.addFreshEntity(itemEntity);
-
-                // Reduziere die Anzahl im Ursprungsstack um 1
-                heldStack.shrink(1);
-            }
-            // Wenn der Stack nur ein Item enthält, wandeln wir es direkt um
-            else {
-                // Erstelle einen neuen Stack mit demselben Slot und reduziere die Größe auf 1
-                player.setItemInHand(player.getUsedItemHand(),
-                        new ItemStack(ModItems.RUBY_SHARD.get(), 1));
+        // Definieren wir verschiedene Item-Kombinationen
+        if (!heldStack.isEmpty()) {
+            // Basis Items
+            if (heldStack.is(ModItems.RUBY.get())) {
+                processConversion(world, pos, player, heldStack, ModItems.RUBY_SHARD.get());
+                return InteractionResult.SUCCESS;
             }
 
-            return InteractionResult.SUCCESS;
+            // Honigwaben-ähnliche Items
+            if (heldStack.is(ModItems.BONDED_SAPPHIRE.get())) {
+                processConversion(world, pos, player, heldStack, ModItems.SAPPHIRE.get());
+                return InteractionResult.SUCCESS;
+            }
+
+
         }
 
         return InteractionResult.PASS;
+    }
+
+    private void processConversion(Level world, BlockPos pos, Player player, ItemStack inputStack, Item outputItem) {
+        // Sound abspielen
+        world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
+
+        // Bei größeren Stacks nur ein Item umwandeln
+        if (inputStack.getCount() > 1) {
+            ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),
+                    new ItemStack(outputItem, 1));
+            world.addFreshEntity(itemEntity);
+            inputStack.shrink(1);
+        }
+        // Bei einzelnen Items direkt umwandeln
+        else {
+            player.setItemInHand(player.getUsedItemHand(),
+                    new ItemStack(outputItem, 1));
+        }
     }
 }

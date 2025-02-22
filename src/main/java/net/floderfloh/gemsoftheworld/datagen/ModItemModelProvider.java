@@ -17,6 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RUBY_SHARD.get());
         basicItem(ModItems.SAPPHIRE.get());
         basicItem(ModItems.BONDED_SAPPHIRE.get());
+        basicItem(ModItems.MINERALS.get());
 
 
         basicItem(ModItems.AMBER.get());

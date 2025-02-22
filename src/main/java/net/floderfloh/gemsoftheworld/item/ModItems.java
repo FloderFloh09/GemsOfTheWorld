@@ -20,6 +20,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_SAPPHIRE = ITEMS.register("bonded_sapphire",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MINERALS = ITEMS.register("minerals",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> JUCY_APPLE = ITEMS.register("jucy_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.JUCY_APPLE)));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
