@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "gem_grindstone",
+  "key": {
+    "A": {
+      "tag": "gemsoftheworld:gem_grindstone_items"
+    },
+    "B": {
+      "item": "minecraft:grindstone"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemsoftheworld:gem_grindstone"
+  }
+}
