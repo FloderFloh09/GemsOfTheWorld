@@ -1,5 +1,6 @@
 package net.floderfloh.gemsoftheworld.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.floderfloh.gemsoftheworld.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -10,15 +11,35 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class GemGrindStone extends Block {
-    public GemGrindStone(Properties properties) {
-        super(properties);
+import java.util.Properties;
+
+public class GemGrindStone extends HorizontalDirectionalBlock {
+    public static final MapCodec<GemGrindStone> CODEC = simpleCodec(GemGrindStone::new);
+    public static final VoxelShape SHAPE = Block.box(3.0, 0.0, 3.0, 13.0, 16.0, 13.0);
+
+    public GemGrindStone(Properties pProperties) {
+        super(pProperties);
     }
+
+    protected VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE;
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return CODEC;
+    }
+
+
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hitResult) {
@@ -72,4 +93,5 @@ public class GemGrindStone extends Block {
         inputStack.shrink(1);
 
     }
+
 }
