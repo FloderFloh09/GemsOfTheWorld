@@ -20,6 +20,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.RUBY_SHARD.get());
+                        output.accept(ModItems.SAPPHIRE.get());
+                        output.accept(ModItems.BONDED_SAPPHIRE.get());
                         output.accept(ModItems.JUCY_APPLE.get());
                         output.accept(ModItems.AMBER.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());

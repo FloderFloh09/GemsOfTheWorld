@@ -15,6 +15,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RUBY.get());
         basicItem(ModItems.RUBY_SHARD.get());
+        basicItem(ModItems.SAPPHIRE.get());
+        basicItem(ModItems.BONDED_SAPPHIRE.get());
 
 
         basicItem(ModItems.AMBER.get());

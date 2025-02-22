@@ -20,6 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.GEM_GRINDSTONE);
 
     }
 

@@ -3,12 +3,16 @@
   "item.gemsoftheworld.jucy_apple": "Jucy Apple",
   "item.gemsoftheworld.ruby_shard": "Ruby Shard",
   "item.gemsoftheworld.amber": "Amber",
+  "item.gemsoftheworld.sapphire": "Sapphire",
+  "item.gemsoftheworld.bonded_sapphire": "Bonded Sapphire",
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
   "block.gemsoftheworld.ruby_shard_block": "Ruby Shard Block",
   "block.gemsoftheworld.ruby_ore": "Ruby Ore",
   "block.gemsoftheworld.ruby_deepslate_ore": "Ruby Deepslate Ore",
+  "block.gemsoftheworld.gem_grindstone": "Gem Grindstone",
+
 
   "creativetab.gemsoftheworld": "Gems of the World - Items"
 }

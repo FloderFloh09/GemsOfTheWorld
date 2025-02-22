@@ -1,6 +1,7 @@
 package net.floderfloh.gemsoftheworld.block;
 
 import net.floderfloh.gemsoftheworld.GemsOfTheWorld;
+import net.floderfloh.gemsoftheworld.block.custom.GemGrindStone;
 import net.floderfloh.gemsoftheworld.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +35,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_DEEPSLATE_ORE = registerBlock("ruby_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> GEM_GRINDSTONE = registerBlock("gem_grindstone",
+            () -> new GemGrindStone(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
 
