@@ -1,6 +1,9 @@
 package net.floderfloh.gemsoftheworld.item;
 
 import net.floderfloh.gemsoftheworld.GemsOfTheWorld;
+import net.floderfloh.gemsoftheworld.item.custom.AmberItem;
+import net.floderfloh.gemsoftheworld.item.custom.ChiselItem;
+import net.floderfloh.gemsoftheworld.item.custom.CombinedAmberItem;
 import net.floderfloh.gemsoftheworld.item.custom.FuelItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,7 +28,18 @@ public class ModItems {
     public static final RegistryObject<Item> JUCY_APPLE = ITEMS.register("jucy_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.JUCY_APPLE)));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
-            () -> new FuelItem(new Item.Properties(), 1200));
+            () -> new CombinedAmberItem(new Item.Properties(), 1200));
+    public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(32)));
+    public static final RegistryObject<Item> STONE_CHISEL = ITEMS.register("stone_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(142)));
+    public static final RegistryObject<Item> IRON_CHISEL = ITEMS.register("iron_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(420)));
+    public static final RegistryObject<Item> DIAMOND_CHISEL = ITEMS.register("diamond_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(856)));
+    public static final RegistryObject<Item> NETHERITE_CHISEL = ITEMS.register("netherite_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(1894)));
+
 
 
 

@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.RUBY_SHARD_BLOCK.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
+        dropSelf(ModBlocks.AMBER_STONE.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY_SHARD.get()));

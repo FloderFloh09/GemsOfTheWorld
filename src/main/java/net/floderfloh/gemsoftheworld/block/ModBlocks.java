@@ -37,6 +37,8 @@ public class ModBlocks {
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> GEM_GRINDSTONE = registerBlock("gem_grindstone",
             () -> new GemGrindStone(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> AMBER_STONE = registerBlock("amber_stone",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
 
 
 

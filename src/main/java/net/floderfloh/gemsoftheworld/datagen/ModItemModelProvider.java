@@ -18,6 +18,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SAPPHIRE.get());
         basicItem(ModItems.BONDED_SAPPHIRE.get());
         basicItem(ModItems.MINERALS.get());
+        basicItem(ModItems.WOOD_CHISEL.get());
+        basicItem(ModItems.STONE_CHISEL.get());
+        basicItem(ModItems.IRON_CHISEL.get());
+        basicItem(ModItems.DIAMOND_CHISEL.get());
+        basicItem(ModItems.NETHERITE_CHISEL.get());
 
 
         basicItem(ModItems.AMBER.get());
