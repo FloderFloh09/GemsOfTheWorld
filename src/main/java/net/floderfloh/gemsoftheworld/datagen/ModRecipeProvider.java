@@ -57,6 +57,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.3f, 200,"sapphire");
         oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.3f, 100, "sapphire");
 
+
+        stairBuilder(ModBlocks.AMBER_STAIRS.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_SLAB.get(), ModItems.AMBER.get());
+
+        buttonBuilder(ModBlocks.AMBER_BUTTON.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.AMBER_PRESSURE_PLATE.get(), ModItems.AMBER.get());
+
+        fenceBuilder(ModBlocks.AMBER_FENCE.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.AMBER_FENCE_GATE.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_WALL.get(), ModItems.AMBER.get());
+
+        doorBuilder(ModBlocks.AMBER_DOOR.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.AMBER_TRAPDOOR.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
+                .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

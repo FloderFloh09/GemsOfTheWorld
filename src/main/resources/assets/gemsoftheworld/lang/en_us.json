@@ -22,6 +22,17 @@
   "block.gemsoftheworld.amber_block": "Amber Block",
   "block.gemsoftheworld.amber_bricks": "Amber Bricks",
 
+  "block.gemsoftheworld.amber_stairs": "Amber Stairs",
+  "block.gemsoftheworld.amber_fence": "Amber Fence",
+  "block.gemsoftheworld.amber_button": "Amber Button",
+  "block.gemsoftheworld.amber_fence_gate": "Amber Fence Gate",
+  "block.gemsoftheworld.amber_door": "Amber Door",
+  "block.gemsoftheworld.amber_trapdoor": "Amber Trapdoor",
+  "block.gemsoftheworld.amber_wall": "Amber Wall",
+  "block.gemsoftheworld.amber_slab": "Amber Slab",
+  "block.gemsoftheworld.amber_pressure_plate": "Amber Pressure Plate",
+
+
 
   "creativetab.gemsoftheworld": "Gems of the World - Items"
 }

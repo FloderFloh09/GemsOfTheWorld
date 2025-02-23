@@ -36,5 +36,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUBY_ORE.get())
                 .add(ModBlocks.RUBY_DEEPSLATE_ORE.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.AMBER_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS).add(ModBlocks.AMBER_WALL.get());
     }
 }
