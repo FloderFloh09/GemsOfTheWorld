@@ -20,17 +20,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RUBY_BLOCK.get())
-                .add(ModBlocks.RUBY_SHARD_BLOCK.get())
                 .add(ModBlocks.RUBY_DEEPSLATE_ORE.get())
                 .add(ModBlocks.RUBY_ORE.get())
-                .add(ModBlocks.GEM_GRINDSTONE.get());
+                .add(ModBlocks.GEM_GRINDSTONE.get())
+                .add(ModBlocks.AMBER_BRICKS.get())
+                .add(ModBlocks.AMBER_BLOCK.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.GEM_GRINDSTONE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.RUBY_BLOCK.get())
-                .add(ModBlocks.RUBY_SHARD_BLOCK.get());
+                .add(ModBlocks.RUBY_BLOCK.get());
 
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)

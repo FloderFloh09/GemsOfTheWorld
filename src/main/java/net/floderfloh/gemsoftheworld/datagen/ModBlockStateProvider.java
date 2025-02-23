@@ -16,11 +16,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.RUBY_BLOCK);
-        blockWithItem(ModBlocks.RUBY_SHARD_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.AMBER_STONE);
+        blockWithItem(ModBlocks.DEEPSLATE_AMBER);
+        blockWithItem(ModBlocks.AMBER_BLOCK);
+        blockWithItem(ModBlocks.AMBER_BRICKS);
 
     }
 

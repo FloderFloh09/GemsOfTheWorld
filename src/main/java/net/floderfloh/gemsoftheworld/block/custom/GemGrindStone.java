@@ -62,7 +62,7 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
 
     private void processSingleOutputConversion(Level world, BlockPos pos, Player player,
                                                ItemStack inputStack, Item outputItem) {
-        world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
+        world.playSound(player, pos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 1f, 1f);
 
         if (inputStack.getCount() > 1) {
             ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),

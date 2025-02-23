@@ -14,10 +14,13 @@
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
-  "block.gemsoftheworld.ruby_shard_block": "Ruby Shard Block",
   "block.gemsoftheworld.ruby_ore": "Ruby Ore",
   "block.gemsoftheworld.ruby_deepslate_ore": "Ruby Deepslate Ore",
   "block.gemsoftheworld.gem_grindstone": "Gem Grindstone",
+  "block.gemsoftheworld.deepslate_amber": "Deepslate Amber",
+  "block.gemsoftheworld.amber_stone": "Amber Stone",
+  "block.gemsoftheworld.amber_block": "Amber Block",
+  "block.gemsoftheworld.amber_bricks": "Amber Bricks",
 
 
   "creativetab.gemsoftheworld": "Gems of the World - Items"

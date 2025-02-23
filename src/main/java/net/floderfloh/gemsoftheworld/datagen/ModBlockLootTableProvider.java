@@ -29,9 +29,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
-        dropSelf(ModBlocks.RUBY_SHARD_BLOCK.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
-        dropSelf(ModBlocks.AMBER_STONE.get());
+        dropSelf(ModBlocks.AMBER_BLOCK.get());
+        dropSelf(ModBlocks.AMBER_BRICKS.get());
+        dropWhenSilkTouch(ModBlocks.AMBER_STONE.get());
+        dropWhenSilkTouch(ModBlocks.DEEPSLATE_AMBER.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY_SHARD.get()));

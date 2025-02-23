@@ -24,10 +24,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-
-    public static final RegistryObject<Block> RUBY_SHARD_BLOCK = registerBlock("ruby_shard_block",
+    public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
+    public static final RegistryObject<Block> AMBER_BRICKS = registerBlock("amber_bricks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.TUFF_BRICKS)));
 
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -39,6 +41,8 @@ public class ModBlocks {
             () -> new GemGrindStone(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> AMBER_STONE = registerBlock("amber_stone",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
+    public static final RegistryObject<Block> DEEPSLATE_AMBER = registerBlock("deepslate_amber",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5f).sound(SoundType.DEEPSLATE)));
 
 
 
