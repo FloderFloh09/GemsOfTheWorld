@@ -51,8 +51,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.AMBER_PRESSURE_PLATE.get());
         this.add(ModBlocks.AMBER_DOOR.get(),
                 block -> createDoorTable(ModBlocks.AMBER_DOOR.get()));
-
-
+        dropSelf(ModBlocks.AMBER_BRICKS_BUTTON.get());
+        this.add(ModBlocks.AMBER_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.AMBER_BRICKS_SLAB.get()));
+        dropSelf(ModBlocks.AMBER_BRICKS_WALL.get());
+        dropSelf(ModBlocks.AMBER_BRICKS_STAIRS.get());
+        dropSelf(ModBlocks.AMBER_TILES_BUTTON.get());
+        this.add(ModBlocks.AMBER_TILES_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.AMBER_TILES_SLAB.get()));
+        dropSelf(ModBlocks.AMBER_TILES_WALL.get());
+        dropSelf(ModBlocks.AMBER_TILES_STAIRS.get());
+        dropSelf(ModBlocks.AMBER_TILES.get());
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

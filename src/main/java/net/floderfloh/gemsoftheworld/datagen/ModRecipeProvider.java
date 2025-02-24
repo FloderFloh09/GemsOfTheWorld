@@ -58,6 +58,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.3f, 100, "sapphire");
 
 
+
+
         stairBuilder(ModBlocks.AMBER_STAIRS.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
                 .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_SLAB.get(), ModItems.AMBER.get());
@@ -76,6 +78,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.AMBER_TRAPDOOR.get(), Ingredient.of(ModItems.AMBER.get())).group("amber")
                 .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
+
+        stairBuilder(ModBlocks.AMBER_BRICKS_STAIRS.get(), Ingredient.of(ModBlocks.AMBER_BRICKS.get())).group("amber_bricks")
+                .unlockedBy(getHasName(ModBlocks.AMBER_BRICKS.get()), has(ModBlocks.AMBER_BRICKS.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_BRICKS_SLAB.get(), ModBlocks.AMBER_BRICKS.get());
+
+        buttonBuilder(ModBlocks.AMBER_BRICKS_BUTTON.get(), Ingredient.of(ModBlocks.AMBER_BRICKS.get())).group("amber_bricks")
+                .unlockedBy(getHasName(ModBlocks.AMBER_BRICKS.get()), has(ModBlocks.AMBER_BRICKS.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_BRICKS_WALL.get(), ModBlocks.AMBER_BRICKS.get());
+
+        stairBuilder(ModBlocks.AMBER_TILES_STAIRS.get(), Ingredient.of(ModBlocks.AMBER_TILES.get())).group("amber_tiles")
+                .unlockedBy(getHasName(ModBlocks.AMBER_TILES.get()), has(ModBlocks.AMBER_TILES.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_TILES_SLAB.get(), ModBlocks.AMBER_TILES.get());
+
+        buttonBuilder(ModBlocks.AMBER_TILES_BUTTON.get(), Ingredient.of(ModBlocks.AMBER_TILES.get())).group("amber_tiles")
+                .unlockedBy(getHasName(ModBlocks.AMBER_TILES.get()), has(ModBlocks.AMBER_TILES.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMBER_TILES_WALL.get(), ModBlocks.AMBER_TILES.get());
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

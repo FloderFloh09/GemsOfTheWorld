@@ -37,6 +37,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.AMBER_BUTTON, ModBlocks.AMBER_BLOCK);
         fenceItem(ModBlocks.AMBER_FENCE, ModBlocks.AMBER_BLOCK);
         wallItem(ModBlocks.AMBER_WALL, ModBlocks.AMBER_BLOCK);
+        wallItem(ModBlocks.AMBER_BRICKS_WALL, ModBlocks.AMBER_BRICKS);
+        buttonItem(ModBlocks.AMBER_BRICKS_BUTTON, ModBlocks.AMBER_BRICKS);
+        wallItem(ModBlocks.AMBER_TILES_WALL, ModBlocks.AMBER_TILES);
+        buttonItem(ModBlocks.AMBER_TILES_BUTTON, ModBlocks.AMBER_TILES);
 
         simpleBlockItem(ModBlocks.AMBER_DOOR);
     }

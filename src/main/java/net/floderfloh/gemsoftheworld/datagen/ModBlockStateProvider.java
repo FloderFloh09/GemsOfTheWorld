@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_AMBER);
         blockWithItem(ModBlocks.AMBER_BLOCK);
         blockWithItem(ModBlocks.AMBER_BRICKS);
+        blockWithItem(ModBlocks.AMBER_TILES);
 
 
         stairsBlock(ModBlocks.AMBER_STAIRS.get(), blockTexture(ModBlocks.AMBER_BLOCK.get()));
@@ -41,12 +42,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(ModBlocks.AMBER_DOOR.get(), modLoc("block/amber_door_bottom"), modLoc("block/amber_door_top"), "cutout");
         trapdoorBlockWithRenderType(ModBlocks.AMBER_TRAPDOOR.get(), modLoc("block/amber_trapdoor"), true, "cutout");
 
+        stairsBlock(ModBlocks.AMBER_BRICKS_STAIRS.get(), blockTexture(ModBlocks.AMBER_BRICKS.get()));
+        slabBlock(ModBlocks.AMBER_BRICKS_SLAB.get(), blockTexture(ModBlocks.AMBER_BRICKS.get()), blockTexture(ModBlocks.AMBER_BRICKS.get()));
+        buttonBlock(ModBlocks.AMBER_BRICKS_BUTTON.get(), blockTexture(ModBlocks.AMBER_BRICKS.get()));
+        wallBlock(ModBlocks.AMBER_BRICKS_WALL.get(), blockTexture(ModBlocks.AMBER_BRICKS.get()));
+
+        stairsBlock(ModBlocks.AMBER_TILES_STAIRS.get(), blockTexture(ModBlocks.AMBER_TILES.get()));
+        slabBlock(ModBlocks.AMBER_TILES_SLAB.get(), blockTexture(ModBlocks.AMBER_TILES.get()), blockTexture(ModBlocks.AMBER_TILES.get()));
+        buttonBlock(ModBlocks.AMBER_TILES_BUTTON.get(), blockTexture(ModBlocks.AMBER_TILES.get()));
+        wallBlock(ModBlocks.AMBER_TILES_WALL.get(), blockTexture(ModBlocks.AMBER_TILES.get()));
+
+
         blockItem(ModBlocks.AMBER_STAIRS);
         blockItem(ModBlocks.AMBER_SLAB);
         blockItem(ModBlocks.AMBER_PRESSURE_PLATE);
         blockItem(ModBlocks.AMBER_FENCE_GATE);
         blockItem(ModBlocks.AMBER_TRAPDOOR, "_bottom");
-
+        blockItem(ModBlocks.AMBER_BRICKS_STAIRS);
+        blockItem(ModBlocks.AMBER_BRICKS_SLAB);
+        blockItem(ModBlocks.AMBER_TILES_STAIRS);
+        blockItem(ModBlocks.AMBER_TILES_SLAB);
 
     }
 

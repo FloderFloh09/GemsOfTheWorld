@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "gemsoftheworld:amber_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "gemsoftheworld:amber_bricks_slab"
+  }
+}

@@ -24,6 +24,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUBY_ORE.get())
                 .add(ModBlocks.GEM_GRINDSTONE.get())
                 .add(ModBlocks.AMBER_BRICKS.get())
+                .add(ModBlocks.AMBER_TILES.get())
                 .add(ModBlocks.AMBER_BLOCK.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -41,6 +42,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCE_GATES).add(ModBlocks.AMBER_FENCE_GATE.get());
 
-        tag(BlockTags.WALLS).add(ModBlocks.AMBER_WALL.get());
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.AMBER_WALL.get())
+                .add(ModBlocks.AMBER_TILES_WALL.get())
+                .add(ModBlocks.AMBER_BRICKS_WALL.get());
+
     }
 }

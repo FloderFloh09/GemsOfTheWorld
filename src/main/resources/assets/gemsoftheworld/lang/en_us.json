@@ -21,6 +21,7 @@
   "block.gemsoftheworld.amber_stone": "Amber Stone",
   "block.gemsoftheworld.amber_block": "Amber Block",
   "block.gemsoftheworld.amber_bricks": "Amber Bricks",
+  "block.gemsoftheworld.amber_tiles": "Amber Tiles",
 
   "block.gemsoftheworld.amber_stairs": "Amber Stairs",
   "block.gemsoftheworld.amber_fence": "Amber Fence",
@@ -31,6 +32,17 @@
   "block.gemsoftheworld.amber_wall": "Amber Wall",
   "block.gemsoftheworld.amber_slab": "Amber Slab",
   "block.gemsoftheworld.amber_pressure_plate": "Amber Pressure Plate",
+
+  "block.gemsoftheworld.amber_bricks_slab": "Amber Bricks Slab",
+  "block.gemsoftheworld.amber_bricks_button": "Amber Bricks Button",
+  "block.gemsoftheworld.amber_bricks_stairs": "Amber Bricks Stairs",
+  "block.gemsoftheworld.amber_bricks_wall": "Amber Bricks Wall",
+
+  "block.gemsoftheworld.amber_tiles_slab": "Amber Tiles Slab",
+  "block.gemsoftheworld.amber_tiles_button": "Amber Tiles Button",
+  "block.gemsoftheworld.amber_tiles_stairs": "Amber Tiles Stairs",
+  "block.gemsoftheworld.amber_tiles_wall": "Amber Tiles Wall",
+
 
 
 

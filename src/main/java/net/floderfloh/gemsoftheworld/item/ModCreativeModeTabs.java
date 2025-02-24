@@ -46,6 +46,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AMBER_SLAB.get());
                         output.accept(ModBlocks.AMBER_TRAPDOOR.get());
                         output.accept(ModBlocks.AMBER_WALL.get());
+                        output.accept(ModBlocks.AMBER_BRICKS_STAIRS.get());
+                        output.accept(ModBlocks.AMBER_BRICKS_SLAB.get());
+                        output.accept(ModBlocks.AMBER_BRICKS_WALL.get());
+                        output.accept(ModBlocks.AMBER_BRICKS_BUTTON.get());
+                        output.accept(ModBlocks.AMBER_TILES_BUTTON.get());
+                        output.accept(ModBlocks.AMBER_TILES_WALL.get());
+                        output.accept(ModBlocks.AMBER_TILES_SLAB.get());
+                        output.accept(ModBlocks.AMBER_TILES_STAIRS.get());
+                        output.accept(ModBlocks.AMBER_TILES.get());
+
 
                     }).build());
 
