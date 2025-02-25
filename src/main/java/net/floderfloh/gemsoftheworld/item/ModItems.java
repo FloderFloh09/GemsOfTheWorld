@@ -1,10 +1,7 @@
 package net.floderfloh.gemsoftheworld.item;
 
 import net.floderfloh.gemsoftheworld.GemsOfTheWorld;
-import net.floderfloh.gemsoftheworld.item.custom.AmberItem;
-import net.floderfloh.gemsoftheworld.item.custom.ChiselItem;
-import net.floderfloh.gemsoftheworld.item.custom.CombinedAmberItem;
-import net.floderfloh.gemsoftheworld.item.custom.FuelItem;
+import net.floderfloh.gemsoftheworld.item.custom.*;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,7 +21,7 @@ public class ModItems {
     public static final RegistryObject<Item> BONDED_SAPPHIRE = ITEMS.register("bonded_sapphire",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MINERALS = ITEMS.register("minerals",
-            () -> new Item(new Item.Properties()));
+            () -> new GemGrowthItem(new Item.Properties()));
     public static final RegistryObject<Item> JUCY_APPLE = ITEMS.register("jucy_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.JUCY_APPLE)));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
