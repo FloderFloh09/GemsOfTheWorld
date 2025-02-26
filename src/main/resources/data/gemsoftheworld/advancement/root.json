@@ -29,6 +29,16 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "alexandrite": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:alexandrite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
 
   },
@@ -50,7 +60,8 @@
     [
       "ruby",
       "amber",
-      "sapphire"
+      "sapphire",
+      "alexandrite"
     ]
   ],
   "sends_telemetry_event": true

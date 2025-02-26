@@ -13,13 +13,12 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -31,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class ChiselItem extends Item {
+public class ChiselItem extends DiggerItem {
     private static final Map<Block, Block> CHISEL_MAP =
             Map.ofEntries(
                     Map.entry(ModBlocks.AMBER_STONE.get(), Blocks.STONE),
@@ -56,14 +55,15 @@ public class ChiselItem extends Item {
                     Map.entry(Blocks.WAXED_EXPOSED_COPPER, Blocks.WAXED_EXPOSED_CHISELED_COPPER),
                     Map.entry(Blocks.WAXED_OXIDIZED_COPPER, Blocks.WAXED_OXIDIZED_CHISELED_COPPER),
                     Map.entry(Blocks.WEATHERED_COPPER, Blocks.WEATHERED_CHISELED_COPPER),
-                    Map.entry(Blocks.WAXED_WEATHERED_COPPER, Blocks.WAXED_WEATHERED_CHISELED_COPPER)
+                    Map.entry(Blocks.WAXED_WEATHERED_COPPER, Blocks.WAXED_WEATHERED_CHISELED_COPPER),
+                    Map.entry(ModBlocks.SAPPHIRE_BLOCK.get(), ModBlocks.CHISELED_SAPPHIRE.get())
             );
 
 
 
 
-    public ChiselItem(Properties pProperties) {
-        super(pProperties);
+    public ChiselItem(Tier pTier, Properties pProperties) {
+        super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
     }
 
     @Override
@@ -76,39 +76,41 @@ public class ChiselItem extends Item {
         ItemStack itemstack = pContext.getItemInHand();
 
         if (!level.isClientSide() && CHISEL_MAP.containsKey(clickedBlock)) {
-            // Block ersetzen
-            level.setBlockAndUpdate(blockpos, CHISEL_MAP.get(clickedBlock).defaultBlockState());
+          if(!Screen.hasShiftDown()) {
+              // Block ersetzen
+              level.setBlockAndUpdate(blockpos, CHISEL_MAP.get(clickedBlock).defaultBlockState());
 
-            // Item beschädigen
-            pContext.getItemInHand().hurtAndBreak(1, (ServerLevel) level, (ServerPlayer) player,
-                    item -> player.onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
+              // Item beschädigen
+              pContext.getItemInHand().hurtAndBreak(1, (ServerLevel) level, (ServerPlayer) player,
+                      item -> player.onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-            // Soundeffekt
-            level.playSound(null, blockpos, SoundEvents.BARREL_OPEN, SoundSource.BLOCKS);
+              // Soundeffekt
+              level.playSound(null, blockpos, SoundEvents.BARREL_OPEN, SoundSource.BLOCKS);
 
-            // Kriterium trigger
-            if (player instanceof ServerPlayer serverPlayer) {
-                ResourceLocation advancementID = ResourceLocation.parse("gemsoftheworld:chiseling_amber");
-                AdvancementHolder advancementHolder = serverPlayer.server.getAdvancements().get(advancementID);
-                if (clickedBlock == ModBlocks.AMBER_STONE.get() || clickedBlock == ModBlocks.DEEPSLATE_AMBER.get()) {
-                    Random random = new Random();
-                    int amberCount = random.nextInt(3) + 1;
-                    ItemEntity amberDrop = new ItemEntity(level,
-                            blockpos.getX() + 0.5,
-                            blockpos.getY() + 0.5,
-                            blockpos.getZ() + 0.5,
-                            new ItemStack(ModItems.AMBER.get(), amberCount));
-                    level.addFreshEntity(amberDrop);
-                    BlockHitResult hitResult = (BlockHitResult) player.pick(5.0D, 0.0F, false);
-                    BlockPos pos = hitResult.getBlockPos();
-                    BlockState state = level.getBlockState(pos);
+              // Kriterium trigger
+              if (player instanceof ServerPlayer serverPlayer) {
+                  ResourceLocation advancementID = ResourceLocation.parse("gemsoftheworld:chiseling_amber");
+                  AdvancementHolder advancementHolder = serverPlayer.server.getAdvancements().get(advancementID);
+                  if (clickedBlock == ModBlocks.AMBER_STONE.get() || clickedBlock == ModBlocks.DEEPSLATE_AMBER.get()) {
+                      Random random = new Random();
+                      int amberCount = random.nextInt(3) + 1;
+                      ItemEntity amberDrop = new ItemEntity(level,
+                              blockpos.getX() + 0.5,
+                              blockpos.getY() + 0.5,
+                              blockpos.getZ() + 0.5,
+                              new ItemStack(ModItems.AMBER.get(), amberCount));
+                      level.addFreshEntity(amberDrop);
+                      BlockHitResult hitResult = (BlockHitResult) player.pick(5.0D, 0.0F, false);
+                      BlockPos pos = hitResult.getBlockPos();
+                      BlockState state = level.getBlockState(pos);
 
-                    serverPlayer.getAdvancements().award(advancementHolder, "chiseling_amber");
-                    }
-                }
+                      serverPlayer.getAdvancements().award(advancementHolder, "chiseling_amber");
+                  }
+              }
 
 
-            return InteractionResult.SUCCESS;
+              return InteractionResult.SUCCESS;
+          }
         }
 
         return InteractionResult.PASS;

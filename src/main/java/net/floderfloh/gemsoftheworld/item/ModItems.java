@@ -4,9 +4,7 @@ import net.floderfloh.gemsoftheworld.GemsOfTheWorld;
 import net.floderfloh.gemsoftheworld.item.custom.*;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -53,16 +51,28 @@ public class ModItems {
 
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }});
+    public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(32)));
+            () -> new ChiselItem(Tiers.WOOD, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.WOOD, 1, -2.5f))));
     public static final RegistryObject<Item> STONE_CHISEL = ITEMS.register("stone_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(142)));
+            () -> new ChiselItem(Tiers.STONE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.STONE, 2, -2.5f))));
     public static final RegistryObject<Item> IRON_CHISEL = ITEMS.register("iron_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(420)));
+            () -> new ChiselItem(Tiers.IRON, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 3, -2.5f))));
     public static final RegistryObject<Item> DIAMOND_CHISEL = ITEMS.register("diamond_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(856)));
+            () -> new ChiselItem(Tiers.DIAMOND, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 4, -2.5f))));
     public static final RegistryObject<Item> NETHERITE_CHISEL = ITEMS.register("netherite_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(1894)));
+            () -> new ChiselItem(Tiers.NETHERITE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4, -2.5f))));
+
+
+
 
 
 

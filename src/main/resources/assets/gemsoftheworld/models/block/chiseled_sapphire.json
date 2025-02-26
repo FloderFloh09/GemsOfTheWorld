@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "gemsoftheworld:block/chiseled_sapphire_top",
+    "side": "gemsoftheworld:block/chiseled_sapphire_side"
+  }
+}

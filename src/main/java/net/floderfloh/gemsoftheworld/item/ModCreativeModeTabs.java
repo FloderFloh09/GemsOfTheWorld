@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.JUCY_APPLE.get());
                         output.accept(ModItems.AMBER.get());
                         output.accept(ModItems.MINERALS.get());
+                        output.accept(ModItems.ALEXANDRITE.get());
+                        output.accept(ModItems.RAW_ALEXANDRITE.get());
                         output.accept(ModItems.WOOD_CHISEL.get());
                         output.accept(ModItems.STONE_CHISEL.get());
                         output.accept(ModItems.IRON_CHISEL.get());
@@ -32,6 +34,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NETHERITE_CHISEL.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
                         output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        output.accept(ModBlocks.CHISELED_SAPPHIRE.get());
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.RUBY_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.AMBER_STONE.get());
@@ -56,6 +59,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AMBER_TILES_SLAB.get());
                         output.accept(ModBlocks.AMBER_TILES_STAIRS.get());
                         output.accept(ModBlocks.AMBER_TILES.get());
+                        output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
 
 
                     }).build());

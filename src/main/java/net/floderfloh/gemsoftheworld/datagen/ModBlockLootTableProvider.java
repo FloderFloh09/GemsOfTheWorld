@@ -30,6 +30,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
         dropSelf(ModBlocks.AMBER_BRICKS.get());
@@ -39,7 +42,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY_SHARD.get()));
         this.add(ModBlocks.RUBY_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RUBY_SHARD.get(), 4, 8));
+                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RUBY_SHARD.get(), 1, 2));
+        this.add(ModBlocks.ALEXANDRITE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
+        this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());
