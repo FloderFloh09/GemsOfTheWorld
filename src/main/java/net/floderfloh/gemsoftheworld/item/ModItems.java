@@ -2,11 +2,17 @@ package net.floderfloh.gemsoftheworld.item;
 
 import net.floderfloh.gemsoftheworld.GemsOfTheWorld;
 import net.floderfloh.gemsoftheworld.item.custom.*;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -21,11 +27,32 @@ public class ModItems {
     public static final RegistryObject<Item> BONDED_SAPPHIRE = ITEMS.register("bonded_sapphire",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MINERALS = ITEMS.register("minerals",
-            () -> new GemGrowthItem(new Item.Properties()));
+            () -> new GemGrowthItem(new Item.Properties()){
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    if(Screen.hasShiftDown()) {
+                        pTooltipComponents.add(Component.translatable("tooltip.gemsoftheworld.minerals"));
+                    } else {
+                        pTooltipComponents.add(Component.translatable("tooltip.gemsoftheworld.minerals.shift_down"));
+                    }
+
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
     public static final RegistryObject<Item> JUCY_APPLE = ITEMS.register("jucy_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.JUCY_APPLE)));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
-            () -> new CombinedAmberItem(new Item.Properties(), 1200));
+            () -> new CombinedAmberItem(new Item.Properties(), 1200){
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    if(Screen.hasShiftDown()) {
+                        pTooltipComponents.add(Component.translatable("tooltip.gemsoftheworld.amber"));
+                    } else {
+                        pTooltipComponents.add(Component.translatable("tooltip.gemsoftheworld.amber.shift_down"));
+                    }
+
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }});
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
     public static final RegistryObject<Item> STONE_CHISEL = ITEMS.register("stone_chisel",

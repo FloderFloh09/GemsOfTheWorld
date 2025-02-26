@@ -107,6 +107,8 @@ public class AmberItem extends Item implements SignApplicator {
     public boolean canApplyToSign(SignText pText, Player pPlayer) {
         return true;
     }
+
+
 }
 
 

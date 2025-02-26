@@ -1,0 +1,48 @@
+{
+  "parent": "gemsoftheworld:root",
+  "criteria": {
+    "grinding": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "gemsoftheworld:gem_grindstone"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "gemsoftheworld:ruby",
+                "gemsoftheworld:sapphire"
+
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.grinding.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "gemsoftheworld:gem_grindstone"
+    },
+    "title": {
+      "translate": "advancements.grinding.title"
+    }
+  },
+  "requirements": [
+    [
+      "grinding"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

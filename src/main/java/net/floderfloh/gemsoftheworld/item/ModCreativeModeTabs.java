@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DIAMOND_CHISEL.get());
                         output.accept(ModItems.NETHERITE_CHISEL.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
+                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.RUBY_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.AMBER_STONE.get());

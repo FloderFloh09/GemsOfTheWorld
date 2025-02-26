@@ -14,6 +14,7 @@
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
+  "block.gemsoftheworld.sapphire_block": "Sapphire Block",
   "block.gemsoftheworld.ruby_ore": "Ruby Ore",
   "block.gemsoftheworld.ruby_deepslate_ore": "Ruby Deepslate Ore",
   "block.gemsoftheworld.gem_grindstone": "Gem Grindstone",
@@ -42,6 +43,27 @@
   "block.gemsoftheworld.amber_tiles_button": "Amber Tiles Button",
   "block.gemsoftheworld.amber_tiles_stairs": "Amber Tiles Stairs",
   "block.gemsoftheworld.amber_tiles_wall": "Amber Tiles Wall",
+
+  "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",
+  "tooltip.gemsoftheworld.chisel": "With this item you can dig up amber.",
+  "tooltip.gemsoftheworld.minerals.shift_down": "Press §eShift§r for more Information!",
+  "tooltip.gemsoftheworld.minerals": "Grow gemstone stalacmites like amethyst!",
+  "tooltip.gemsoftheworld.amber.shift_down":"Press §eShift§r for more Information!",
+  "tooltip.gemsoftheworld.amber":"Use it as fuel and also as a wax for copper.",
+
+  "advancements.chiseling_amber.title": "The ancient blood of nature",
+  "advancements.chiseling_amber.description": "Get amber by chiseling the amber stones.",
+
+  "advancements.root.description": "Obtain your first shiny gem.",
+  "advancements.root.title": "Gems of the World",
+
+  "bell_ringer.description": "AAAAAAAAAAAA",
+  "bell_ringer.title": "grrrrrrrrr",
+
+  "advancements.grinding.title": "Who needs the Grind(stone)?",
+  "advancements.grinding.description": "Grind some blunt gems.",
+  "advancements.minerals_as_bonemeal.description": "hi",
+  "advancements.minerals_as_bonemeal.title": "2.0",
 
 
 

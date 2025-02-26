@@ -1,0 +1,57 @@
+{
+  "criteria": {
+    "ruby": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:gems"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "amber": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:amber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sapphire": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:sapphire"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+
+  },
+  "display": {
+    "background": "gemsoftheworld:textures/block/ruby_block.png",
+    "description": {
+      "translate": "advancements.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:dirt"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "ruby",
+      "amber",
+      "sapphire"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

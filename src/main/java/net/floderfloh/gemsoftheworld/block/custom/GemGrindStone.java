@@ -2,7 +2,9 @@ package net.floderfloh.gemsoftheworld.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.floderfloh.gemsoftheworld.item.ModItems;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -50,12 +52,19 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
         // Basis Items
         if (heldStack.is(ModItems.RUBY.get())) {
             processSingleOutputConversion(world, pos, player, heldStack, ModItems.RUBY_SHARD.get());
+            if (!world.isClientSide() && player instanceof ServerPlayer) {
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, heldStack);
+            }
+
             return InteractionResult.SUCCESS;
         }
 
         // Item mit zwei Ausgaben
         if (heldStack.is(ModItems.BONDED_SAPPHIRE.get())) {
             processDualOutputConversion(world, pos, player, heldStack);
+            if (!world.isClientSide() && player instanceof ServerPlayer) {
+                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, heldStack);
+            }
             return InteractionResult.SUCCESS;
         }
 

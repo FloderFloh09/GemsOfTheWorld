@@ -1,13 +1,17 @@
 package net.floderfloh.gemsoftheworld.item.custom;
 
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AmethystClusterBlock;
@@ -27,6 +31,8 @@ public class GemGrowthItem extends Item {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         BlockState state = level.getBlockState(pos);
+        Player player = context.getPlayer();
+        ItemStack itemstack = context.getItemInHand();
 
 
 
@@ -39,6 +45,7 @@ public class GemGrowthItem extends Item {
                     if (growAmethyst(serverLevel, pos, state)) {
                         context.getItemInHand().shrink(1);
                         playEffects(serverLevel, pos);
+                        CriteriaTriggers.USING_ITEM.trigger((ServerPlayer)player,itemstack);
                         return InteractionResult.SUCCESS;
                     }
                 }

@@ -1,0 +1,37 @@
+{
+  "parent": "gemsoftheworld:root",
+  "criteria": {
+    "minerals_as_bonemeal": {
+      "conditions": {
+        "location": [
+          {
+
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "items": "gemsoftheworld:minerals"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.minerals_as_bonemeal.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "gemsoftheworld:minerals"
+    },
+    "title": {
+      "translate": "advancements.minerals_as_bonemeal.title"
+    }
+  },
+  "requirements": [
+    [
+      "minerals_as_bonemeal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
