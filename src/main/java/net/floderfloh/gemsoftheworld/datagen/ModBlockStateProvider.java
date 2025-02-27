@@ -23,11 +23,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AMBER_BLOCK);
         blockWithItem(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         blockWithItem(ModBlocks.ALEXANDRITE_BLOCK);
+        blockWithItem(ModBlocks.RAW_PINK_GARNET_BLOCK);
+        blockWithItem(ModBlocks.PINK_GARNET_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.ALEXANDRITE_ORE);
         blockWithItem(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.PINK_GARNET_ORE);
+        blockWithItem(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.AMBER_STONE);
         blockWithItem(ModBlocks.DEEPSLATE_AMBER);
         blockWithItem(ModBlocks.AMBER_BRICKS);

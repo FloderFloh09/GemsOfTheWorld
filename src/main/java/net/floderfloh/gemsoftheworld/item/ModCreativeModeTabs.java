@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MINERALS.get());
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.RAW_PINK_GARNET.get());
+                        output.accept(ModItems.PINK_GARNET.get());
                         output.accept(ModItems.WOOD_CHISEL.get());
                         output.accept(ModItems.STONE_CHISEL.get());
                         output.accept(ModItems.IRON_CHISEL.get());
@@ -63,6 +65,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.PINK_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.PINK_GARNET_ORE.get());
+                        output.accept(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
 
 
                     }).build());

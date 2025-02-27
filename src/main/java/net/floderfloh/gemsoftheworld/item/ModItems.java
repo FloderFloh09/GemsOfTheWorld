@@ -55,6 +55,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINK_GARNET = ITEMS.register("pink_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_PINK_GARNET = ITEMS.register("raw_pink_garnet",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
             () -> new ChiselItem(Tiers.WOOD, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.WOOD, 1, -2.5f))));

@@ -30,7 +30,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_PINK_GARNET_BLOCK.get())
+                .add(ModBlocks.PINK_GARNET_ORE.get())
+                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
 
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -40,7 +44,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.RUBY_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.PINK_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
 
 
 
@@ -49,7 +55,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUBY_ORE.get())
                 .add(ModBlocks.RUBY_DEEPSLATE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_GARNET_ORE.get())
+                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

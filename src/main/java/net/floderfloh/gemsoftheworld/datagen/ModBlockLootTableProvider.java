@@ -32,6 +32,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.PINK_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
@@ -47,6 +49,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
+        this.add(ModBlocks.PINK_GARNET_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
+        this.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

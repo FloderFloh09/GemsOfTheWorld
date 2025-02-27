@@ -51,6 +51,16 @@
   "block.gemsoftheworld.amber_tiles_stairs": "Amber Tiles Stairs",
   "block.gemsoftheworld.amber_tiles_wall": "Amber Tiles Wall",
 
+  "item.gemsoftheworld.pink_garnet": "Pink Garnet",
+  "item.gemsoftheworld.raw_pink_garnet": "Raw Pink Garnet",
+
+  "block.gemsoftheworld.pink_garnet_block": "Block of Pink Garnet",
+  "block.gemsoftheworld.raw_pink_garnet_block": "Block of Raw Pink Garnet",
+
+  "block.gemsoftheworld.pink_garnet_ore": "Pink Garnet Ore",
+  "block.gemsoftheworld.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",
   "tooltip.gemsoftheworld.chisel": "With this item you can dig up amber.",
   "tooltip.gemsoftheworld.minerals.shift_down": "Press §eShift§r for more Information!",

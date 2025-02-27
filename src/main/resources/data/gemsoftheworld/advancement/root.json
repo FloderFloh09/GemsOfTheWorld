@@ -42,6 +42,18 @@
     }
 
   },
+  "pink_garnet": {
+    "conditions": {
+      "items": [
+        {
+          "item": "gemsoftheworld:pink_garnet"
+        }
+      ]
+    },
+    "trigger": "minecraft:inventory_changed"
+  }
+
+},
   "display": {
     "background": "gemsoftheworld:textures/block/ruby_block.png",
     "description": {
@@ -62,6 +74,7 @@
       "amber",
       "sapphire",
       "alexandrite"
+      "pink_garnet"
     ]
   ],
   "sends_telemetry_event": true
