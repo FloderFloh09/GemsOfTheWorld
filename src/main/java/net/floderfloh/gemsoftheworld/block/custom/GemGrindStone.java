@@ -2,13 +2,15 @@ package net.floderfloh.gemsoftheworld.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.floderfloh.gemsoftheworld.item.ModItems;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -19,24 +21,88 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.AttachFace;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
-import java.util.Properties;
+import java.util.EnumMap;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GemGrindStone extends HorizontalDirectionalBlock {
     public static final MapCodec<GemGrindStone> CODEC = simpleCodec(GemGrindStone::new);
     public static final VoxelShape SHAPE = Block.box(3.0, 0.0, 3.0, 13.0, 16.0, 13.0);
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
+
+    private static final Map<RegistryObject<Item>, RegistryObject<Item>> GRINDING_RECIPES = new HashMap<>();
+
+    static {
+        GRINDING_RECIPES.put(ModItems.BONDED_RUBY, ModItems.RUBY_SHARD);
+        GRINDING_RECIPES.put(ModItems.BONDED_SAPPHIRE, ModItems.SAPPHIRE);
+        GRINDING_RECIPES.put(ModItems.BONDED_ALEXANDRITE, ModItems.RAW_ALEXANDRITE);
+        GRINDING_RECIPES.put(ModItems.BONDED_PINK_GARNET, ModItems.RAW_PINK_GARNET);
+        GRINDING_RECIPES.put(ModItems.BONDED_GREEN_GARNET, ModItems.RAW_GREEN_GARNET);
+        GRINDING_RECIPES.put(ModItems.BONDED_RED_GARNET, ModItems.RAW_RED_GARNET);
+        GRINDING_RECIPES.put(ModItems.BONDED_YELLOW_GARNET, ModItems.RAW_YELLOW_GARNET);
+    }
 
     public GemGrindStone(Properties pProperties) {
         super(pProperties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, net.minecraft.core.Direction.NORTH));
     }
 
-    protected VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return SHAPE;
+    private static final Map<AttachFace, VoxelShape> SHAPES = new EnumMap<>(AttachFace.class);
+    static {
+        SHAPES.put(AttachFace.FLOOR, Block.box(0, 0, 0, 16, 8, 16));
+        SHAPES.put(AttachFace.WALL, Block.box(0, 0, 0, 16, 16, 8));
+        SHAPES.put(AttachFace.CEILING, Block.box(0, 8, 0, 16, 16, 16));
     }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPES.get(state.getValue(FACE));
+    }
+
+
+
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, FACE);
+    }
+
+
+    @Override
+    @Nullable
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        Direction direction = context.getClickedFace();
+        AttachFace face;
+
+        if (direction == Direction.DOWN) {
+            face = AttachFace.CEILING;
+        } else if (direction == Direction.UP) {
+            face = AttachFace.FLOOR;
+        } else {
+            face = AttachFace.WALL;
+        }
+
+        return this.defaultBlockState()
+                .setValue(FACE, face)
+                .setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+
+
+
+
 
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
@@ -44,26 +110,18 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
     }
 
 
-
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hitResult) {
         ItemStack heldStack = player.getItemInHand(player.getUsedItemHand());
 
-        // Basis Items
-        if (heldStack.is(ModItems.RUBY.get())) {
-            processSingleOutputConversion(world, pos, player, heldStack, ModItems.RUBY_SHARD.get());
-            if (!world.isClientSide() && player instanceof ServerPlayer) {
-                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, heldStack);
-            }
+        Item outputItem = getOutputItem(heldStack.getItem());
 
-            return InteractionResult.SUCCESS;
-        }
-
-        // Item mit zwei Ausgaben
-        if (heldStack.is(ModItems.BONDED_SAPPHIRE.get())) {
-            processDualOutputConversion(world, pos, player, heldStack);
-            if (!world.isClientSide() && player instanceof ServerPlayer) {
-                CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, heldStack);
+        if (outputItem != null) {
+            processConversion(world, pos, player, heldStack, outputItem);
+            if (!world.isClientSide() && player instanceof ServerPlayer serverPlayer) {
+                ResourceLocation advancementID = ResourceLocation.parse("gemsoftheworld:grinding");
+                AdvancementHolder advancementHolder = serverPlayer.server.getAdvancements().get(advancementID);
+                serverPlayer.getAdvancements().award(advancementHolder, "grinding");
             }
             return InteractionResult.SUCCESS;
         }
@@ -71,40 +129,36 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
         return InteractionResult.PASS;
     }
 
-    private void processSingleOutputConversion(Level world, BlockPos pos, Player player,
-                                               ItemStack inputStack, Item outputItem) {
+    private void processConversion(Level world, BlockPos pos, Player player, ItemStack inputStack, Item outputItem) {
         world.playSound(player, pos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 1f, 1f);
 
-        if (inputStack.getCount() > 1) {
-            ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),
-                    new ItemStack(outputItem, 1));
-            world.addFreshEntity(itemEntity);
-            inputStack.shrink(1);
-        } else {
-            player.setItemInHand(player.getUsedItemHand(),
-                    new ItemStack(outputItem, 1));
+        // 30% Wahrscheinlichkeit, dass die Verarbeitung fehlschlägt
+        if (RandomSource.create().nextFloat() < 0.3f) {
+            return; // Keine Items werden ausgegeben
         }
-    }
-
-    private void processDualOutputConversion(Level world, BlockPos pos, Player player, ItemStack inputStack) {
-        world.playSound(player, pos, SoundEvents.ANVIL_STEP, SoundSource.BLOCKS, 1f, 1f);
 
         // Erstes Ausgabeitem
-        ItemEntity firstItem = new ItemEntity(world, pos.getX() - 0.3, pos.getY() + 1, pos.getZ(),
-                new ItemStack(ModItems.SAPPHIRE.get(), 1));
-
-        // Zweites Ausgabeitem
-        ItemEntity secondItem = new ItemEntity(world, pos.getX() + 0.3, pos.getY() + 1, pos.getZ(),
-                new ItemStack(ModItems.MINERALS.get(), 1));
-
+        ItemEntity firstItem = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),
+                new ItemStack(outputItem, 1));
         world.addFreshEntity(firstItem);
+
+        // Zweites Ausgabeitem: Minerals (immer hinzugefügt)
+        ItemEntity secondItem = new ItemEntity(world, pos.getX(), pos.getY() + 1, pos.getZ(),
+                new ItemStack(ModItems.MINERALS.get(), 1));
         world.addFreshEntity(secondItem);
 
         // Reduziere den Eingabestack um 1
         inputStack.shrink(1);
-
     }
 
-
-
+    private Item getOutputItem(Item input) {
+        return GRINDING_RECIPES.entrySet().stream()
+                .filter(entry -> entry.getKey().get() == input)
+                .map(entry -> entry.getValue().get())
+                .findFirst()
+                .orElse(null);
+    }
 }
+
+
+

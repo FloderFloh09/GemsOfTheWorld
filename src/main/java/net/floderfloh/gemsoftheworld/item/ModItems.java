@@ -24,6 +24,18 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_SAPPHIRE = ITEMS.register("bonded_sapphire",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_RUBY = ITEMS.register("bonded_ruby",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_ALEXANDRITE = ITEMS.register("bonded_alexandrite",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_PINK_GARNET = ITEMS.register("bonded_pink_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_RED_GARNET = ITEMS.register("bonded_red_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_YELLOW_GARNET = ITEMS.register("bonded_yellow_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_GREEN_GARNET = ITEMS.register("bonded_green_garnet",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MINERALS = ITEMS.register("minerals",
             () -> new GemGrowthItem(new Item.Properties()){
                 @Override
@@ -58,6 +70,18 @@ public class ModItems {
     public static final RegistryObject<Item> PINK_GARNET = ITEMS.register("pink_garnet",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_PINK_GARNET = ITEMS.register("raw_pink_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_GARNET = ITEMS.register("red_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_RED_GARNET = ITEMS.register("raw_red_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_GARNET = ITEMS.register("yellow_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_YELLOW_GARNET = ITEMS.register("raw_yellow_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GREEN_GARNET = ITEMS.register("green_garnet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_GREEN_GARNET = ITEMS.register("raw_green_garnet",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
             () -> new ChiselItem(Tiers.WOOD, new Item.Properties()

@@ -29,6 +29,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
         List<ItemLike> PG_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET.get(),ModBlocks.PINK_GARNET_ORE.get(),
                 ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
+        List<ItemLike> RG_SMELTABLES = List.of(ModItems.RAW_RED_GARNET.get(),ModBlocks.RED_GARNET_ORE.get(),
+                ModBlocks.RED_GARNET_DEEPSLATE_ORE.get());
+        List<ItemLike> GG_SMELTABLES = List.of(ModItems.RAW_GREEN_GARNET.get(),ModBlocks.GREEN_GARNET_ORE.get(),
+                ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get());
+        List<ItemLike> YG_SMELTABLES = List.of(ModItems.RAW_YELLOW_GARNET.get(),ModBlocks.YELLOW_GARNET_ORE.get(),
+                ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -55,6 +61,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.RAW_ALEXANDRITE.get())
                 .unlockedBy(getHasName(ModItems.RAW_ALEXANDRITE.get()), has(ModItems.RAW_ALEXANDRITE.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_GARNET_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -67,6 +74,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.RAW_PINK_GARNET.get())
                 .unlockedBy(getHasName(ModItems.RAW_PINK_GARNET.get()), has(ModItems.RAW_PINK_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RED_GARNET.get())
+                .unlockedBy(getHasName(ModItems.RED_GARNET.get()), has(ModItems.RED_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_RED_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RAW_RED_GARNET.get())
+                .unlockedBy(getHasName(ModItems.RAW_RED_GARNET.get()), has(ModItems.RAW_RED_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.GREEN_GARNET.get())
+                .unlockedBy(getHasName(ModItems.GREEN_GARNET.get()), has(ModItems.GREEN_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_GREEN_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RAW_GREEN_GARNET.get())
+                .unlockedBy(getHasName(ModItems.RAW_GREEN_GARNET.get()), has(ModItems.RAW_GREEN_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.YELLOW_GARNET.get())
+                .unlockedBy(getHasName(ModItems.YELLOW_GARNET.get()), has(ModItems.YELLOW_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_YELLOW_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RAW_YELLOW_GARNET.get())
+                .unlockedBy(getHasName(ModItems.RAW_YELLOW_GARNET.get()), has(ModItems.RAW_YELLOW_GARNET.get())).save(pRecipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.RUBY_BLOCK.get())
@@ -96,6 +140,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_PINK_GARNET_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_PINK_GARNET_BLOCK.get()), has(ModBlocks.RAW_PINK_GARNET_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_pink_garnet_from_raw_pink_garnet_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RED_GARNET.get(), 9)
+                .requires(ModBlocks.RED_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RED_GARNET_BLOCK.get()), has(ModBlocks.RED_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":red_garnet_from_red_garnet_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_RED_GARNET.get(), 9)
+                .requires(ModBlocks.RAW_RED_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_RED_GARNET_BLOCK.get()), has(ModBlocks.RAW_RED_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_red_garnet_from_raw_red_garnet_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 9)
+                .requires(ModBlocks.YELLOW_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.YELLOW_GARNET_BLOCK.get()), has(ModBlocks.YELLOW_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":yellow_garnet_from_yellow_garnet_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_YELLOW_GARNET.get(), 9)
+                .requires(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get()), has(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_yellow_garnet_from_raw_yellow_garnet_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 9)
+                .requires(ModBlocks.GREEN_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.GREEN_GARNET_BLOCK.get()), has(ModBlocks.GREEN_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":green_garnet_from_green_garnet_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_GREEN_GARNET.get(), 9)
+                .requires(ModBlocks.RAW_GREEN_GARNET_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_GREEN_GARNET_BLOCK.get()), has(ModBlocks.RAW_GREEN_GARNET_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_green_garnet_from_raw_green_garnet_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
                 .requires(ModBlocks.AMBER_BLOCK.get())
@@ -117,8 +188,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
         oreSmelting(pRecipeOutput, ALEX_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200,"alex");
         oreBlasting(pRecipeOutput, ALEX_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100, "alex");
-        oreSmelting(pRecipeOutput, PG_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200,"garnet");
-        oreBlasting(pRecipeOutput, PG_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100, "garnet");
+        oreSmelting(pRecipeOutput, PG_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET.get(), 0.25f, 200,"garnet");
+        oreBlasting(pRecipeOutput, PG_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET.get(), 0.25f, 100, "garnet");
+        oreSmelting(pRecipeOutput, GG_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GARNET.get(), 0.25f, 200,"garnet");
+        oreBlasting(pRecipeOutput, GG_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GARNET.get(), 0.25f, 100, "garnet");
+        oreSmelting(pRecipeOutput, RG_SMELTABLES, RecipeCategory.MISC, ModItems.RED_GARNET.get(), 0.25f, 200,"garnet");
+        oreBlasting(pRecipeOutput, RG_SMELTABLES, RecipeCategory.MISC, ModItems.RED_GARNET.get(), 0.25f, 100, "garnet");
+        oreSmelting(pRecipeOutput, YG_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 0.25f, 200,"garnet");
+        oreBlasting(pRecipeOutput, YG_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 0.25f, 100, "garnet");
 
 
 

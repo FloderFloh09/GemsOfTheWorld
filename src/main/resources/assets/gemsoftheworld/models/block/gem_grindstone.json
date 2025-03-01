@@ -4,7 +4,7 @@
     "pivot": "gemsoftheworld:block/gem_grindstone_pivot",
     "round": "gemsoftheworld:block/gem_grindstone_round",
     "side": "gemsoftheworld:block/gem_grindstone_side",
-    "particle": "gemsoftheworld:block/gem_grindstone_side",
+    "particle": "block/grindstone_side",
     "leg": "block/dark_oak_log"
   },
   "elements": [

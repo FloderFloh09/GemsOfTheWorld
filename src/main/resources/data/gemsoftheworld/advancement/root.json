@@ -39,19 +39,119 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "pink_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:pink_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "red_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:red_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "green_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:green_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yellow_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:yellow_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_ruby": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_ruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_sapphire": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_sapphire"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_alexandrite": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_alexandrite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_pink_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_pink_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_red_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_red_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_yellow_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_yellow_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_green_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_green_garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
 
-  },
-  "pink_garnet": {
-    "conditions": {
-      "items": [
-        {
-          "item": "gemsoftheworld:pink_garnet"
-        }
-      ]
-    },
-    "trigger": "minecraft:inventory_changed"
-  }
+
 
 },
   "display": {
@@ -73,8 +173,18 @@
       "ruby",
       "amber",
       "sapphire",
-      "alexandrite"
-      "pink_garnet"
+      "alexandrite",
+      "pink_garnet",
+      "red_garnet",
+      "green_garnet",
+      "yellow_garnet",
+      "bonded_ruby",
+      "bonded_sapphire",
+      "bonded_alexandrite",
+      "bonded_pink_garnet",
+      "bonded_red_garnet",
+      "bonded_yellow_garnet",
+      "bonded_green_garnet"
     ]
   ],
   "sends_telemetry_event": true

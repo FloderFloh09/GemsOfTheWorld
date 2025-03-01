@@ -25,6 +25,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ALEXANDRITE_BLOCK);
         blockWithItem(ModBlocks.RAW_PINK_GARNET_BLOCK);
         blockWithItem(ModBlocks.PINK_GARNET_BLOCK);
+        blockWithItem(ModBlocks.RAW_RED_GARNET_BLOCK);
+        blockWithItem(ModBlocks.RED_GARNET_BLOCK);
+        blockWithItem(ModBlocks.RAW_GREEN_GARNET_BLOCK);
+        blockWithItem(ModBlocks.GREEN_GARNET_BLOCK);
+        blockWithItem(ModBlocks.RAW_YELLOW_GARNET_BLOCK);
+        blockWithItem(ModBlocks.YELLOW_GARNET_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
@@ -32,6 +38,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.PINK_GARNET_ORE);
         blockWithItem(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.RED_GARNET_ORE);
+        blockWithItem(ModBlocks.RED_GARNET_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.GREEN_GARNET_ORE);
+        blockWithItem(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.YELLOW_GARNET_ORE);
+        blockWithItem(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.AMBER_STONE);
         blockWithItem(ModBlocks.DEEPSLATE_AMBER);
         blockWithItem(ModBlocks.AMBER_BRICKS);

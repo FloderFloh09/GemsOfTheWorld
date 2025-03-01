@@ -22,6 +22,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_SHARD.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.BONDED_SAPPHIRE.get());
+                        output.accept(ModItems.BONDED_RUBY.get());
+                        output.accept(ModItems.BONDED_ALEXANDRITE.get());
+                        output.accept(ModItems.BONDED_PINK_GARNET.get());
+                        output.accept(ModItems.BONDED_YELLOW_GARNET.get());
+                        output.accept(ModItems.BONDED_GREEN_GARNET.get());
+                        output.accept(ModItems.BONDED_RED_GARNET.get());
                         output.accept(ModItems.JUCY_APPLE.get());
                         output.accept(ModItems.AMBER.get());
                         output.accept(ModItems.MINERALS.get());
@@ -69,6 +75,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PINK_GARNET_BLOCK.get());
                         output.accept(ModBlocks.PINK_GARNET_ORE.get());
                         output.accept(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_RED_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.RED_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.RED_GARNET_ORE.get());
+                        output.accept(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_GREEN_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.GREEN_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.GREEN_GARNET_ORE.get());
+                        output.accept(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.YELLOW_GARNET_BLOCK.get());
+                        output.accept(ModBlocks.YELLOW_GARNET_ORE.get());
+                        output.accept(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
 
 
                     }).build());

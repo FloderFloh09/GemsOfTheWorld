@@ -34,7 +34,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.PINK_GARNET_BLOCK.get())
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK.get())
                 .add(ModBlocks.PINK_GARNET_ORE.get())
-                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
+                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.RED_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_RED_GARNET_BLOCK.get())
+                .add(ModBlocks.RED_GARNET_ORE.get())
+                .add(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.GREEN_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_GREEN_GARNET_BLOCK.get())
+                .add(ModBlocks.GREEN_GARNET_ORE.get())
+                .add(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.YELLOW_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get())
+                .add(ModBlocks.YELLOW_GARNET_ORE.get())
+                .add(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
 
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -46,7 +58,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.PINK_GARNET_BLOCK.get())
-                .add(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
+                .add(ModBlocks.RAW_PINK_GARNET_BLOCK.get())
+                .add(ModBlocks.RED_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_RED_GARNET_BLOCK.get())
+                .add(ModBlocks.GREEN_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_GREEN_GARNET_BLOCK.get())
+                .add(ModBlocks.YELLOW_GARNET_BLOCK.get())
+                .add(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get());
+
 
 
 
@@ -57,7 +76,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.PINK_GARNET_ORE.get())
-                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get());
+                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.RED_GARNET_ORE.get())
+                .add(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.GREEN_GARNET_ORE.get())
+                .add(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get())
+                .add(ModBlocks.YELLOW_GARNET_ORE.get())
+                .add(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

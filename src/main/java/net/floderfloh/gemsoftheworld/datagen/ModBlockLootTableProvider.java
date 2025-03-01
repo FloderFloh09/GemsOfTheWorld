@@ -34,6 +34,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
         dropSelf(ModBlocks.PINK_GARNET_BLOCK.get());
         dropSelf(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RED_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_RED_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.GREEN_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_GREEN_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.YELLOW_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
@@ -53,6 +59,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
         this.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
+        this.add(ModBlocks.RED_GARNET_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_ORE.get(), ModItems.RAW_RED_GARNET.get(), 1, 3));
+        this.add(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_RED_GARNET.get(), 1, 3));
+        this.add(ModBlocks.GREEN_GARNET_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_ORE.get(), ModItems.RAW_GREEN_GARNET.get(), 1, 3));
+        this.add(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_GREEN_GARNET.get(), 1, 3));
+        this.add(ModBlocks.YELLOW_GARNET_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_ORE.get(), ModItems.RAW_YELLOW_GARNET.get(), 1, 3));
+        this.add(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_YELLOW_GARNET.get(), 1, 3));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

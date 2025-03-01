@@ -65,6 +65,45 @@ public class ModBlocks {
     public static final RegistryObject<Block> PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> RED_GARNET_BLOCK = registerBlock("red_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> RAW_RED_GARNET_BLOCK = registerBlock("raw_red_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RED_GARNET_ORE = registerBlock("red_garnet_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_GARNET_DEEPSLATE_ORE = registerBlock("red_garnet_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> YELLOW_GARNET_BLOCK = registerBlock("yellow_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> RAW_YELLOW_GARNET_BLOCK = registerBlock("raw_yellow_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> YELLOW_GARNET_ORE = registerBlock("yellow_garnet_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_GARNET_DEEPSLATE_ORE = registerBlock("yellow_garnet_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> GREEN_GARNET_BLOCK = registerBlock("green_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> RAW_GREEN_GARNET_BLOCK = registerBlock("raw_green_garnet_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GREEN_GARNET_ORE = registerBlock("green_garnet_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_GARNET_DEEPSLATE_ORE = registerBlock("green_garnet_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> GEM_GRINDSTONE = registerBlock("gem_grindstone",
             () -> new GemGrindStone(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
