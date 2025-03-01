@@ -19,6 +19,10 @@
   "item.gemsoftheworld.netherite_chisel": "Netherite Chisel",
   "item.gemsoftheworld.alexandrite": "Alexandrite",
   "item.gemsoftheworld.raw_alexandrite": "Raw Alexandrite",
+  "item.gemsoftheworld.citrine": "Citrine",
+  "item.gemsoftheworld.raw_citrine": "Raw Citrine",
+  "item.gemsoftheworld.tanzanite": "Tanzanite",
+  "item.gemsoftheworld.bonded_tanzanite": "Bonded Tanzanite",
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
@@ -65,6 +69,7 @@
   "item.gemsoftheworld.raw_yellow_garnet": "Raw Yellow Garnet",
   "item.gemsoftheworld.green_garnet": "Green Garnet",
   "item.gemsoftheworld.raw_green_garnet": "Raw Green Garnet",
+  "item.gemsoftheworld.bonded_diamond": "Bonded Diamond",
 
   "block.gemsoftheworld.pink_garnet_block": "Block of Pink Garnet",
   "block.gemsoftheworld.raw_pink_garnet_block": "Block of Raw Pink Garnet",
@@ -82,6 +87,12 @@
   "block.gemsoftheworld.raw_yellow_garnet_block": "Block of Raw Yellow Garnet",
   "block.gemsoftheworld.yellow_garnet_ore": "Yellow Garnet Ore",
   "block.gemsoftheworld.yellow_garnet_deepslate_ore": "Yellow Garnet Deepslate Ore",
+  "block.gemsoftheworld.citrine_block": "Citrine Block",
+  "block.gemsoftheworld.raw_citrine_block": "Block of Raw Citrine",
+  "block.gemsoftheworld.citrine_ore": "Citrine Ore",
+  "block.gemsoftheworld.deepslate_citrine_ore": "Citrine Deepslate Ore",
+  "block.gemsoftheworld.sapphire_ore": "Sapphire Ore",
+  "block.gemsoftheworld.deepslate_sapphire_ore": "Sapphire Deepslate Ore",
 
 
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",

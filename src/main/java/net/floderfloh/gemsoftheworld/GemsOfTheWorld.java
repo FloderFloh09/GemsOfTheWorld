@@ -2,12 +2,20 @@ package net.floderfloh.gemsoftheworld;
 
 import com.mojang.logging.LogUtils;
 import net.floderfloh.gemsoftheworld.block.ModBlocks;
+import net.floderfloh.gemsoftheworld.block.custom.GemGrindStone;
 import net.floderfloh.gemsoftheworld.item.ModCreativeModeTabs;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.floderfloh.gemsoftheworld.item.ModItems;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -54,6 +62,7 @@ public class GemsOfTheWorld
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(GemGrindStone::initializeRecipes);
 
     }
 
@@ -84,4 +93,28 @@ public class GemsOfTheWorld
 
         }
     }
+    @SubscribeEvent
+    public void onBlockBreak(BlockEvent.BreakEvent event) {
+        if (!(event.getPlayer().level() instanceof ServerLevel serverLevel)) {
+            return; // Stelle sicher, dass wir auf dem Server sind
+        }
+
+        BlockPos pos = event.getPos();
+
+        // Prüfen, ob der abgebrochene Block Diamanterz oder Tiefenschiefer-Diamanterz ist
+        if (serverLevel.getBlockState(pos).is(Blocks.DIAMOND_ORE) || serverLevel.getBlockState(pos).is(Blocks.DEEPSLATE_DIAMOND_ORE)) {
+            event.setCanceled(true); // Stoppe das normale Abbauen (damit die Standard-Drops nicht passieren)
+
+            // Ersetze den Block durch Luft (als wäre er normal abgebaut worden)
+            serverLevel.removeBlock(pos, false);
+
+            // Lasse stattdessen einen "Raw Citrine" droppen
+            serverLevel.addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(
+                    serverLevel, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                    new ItemStack(ModItems.RAW_CITRINE.get())
+            ));
+        }
+    }
 }
+
+

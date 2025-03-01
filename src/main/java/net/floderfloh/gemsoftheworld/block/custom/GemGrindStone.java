@@ -15,6 +15,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -29,12 +30,14 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 
 public class GemGrindStone extends HorizontalDirectionalBlock {
     public static final MapCodec<GemGrindStone> CODEC = simpleCodec(GemGrindStone::new);
@@ -43,6 +46,7 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
     public static final EnumProperty<AttachFace> FACE = BlockStateProperties.ATTACH_FACE;
 
     private static final Map<RegistryObject<Item>, RegistryObject<Item>> GRINDING_RECIPES = new HashMap<>();
+    private static final Map<Item, Item> VANILLA_GRINDING_RECIPES = new HashMap<>();
 
     static {
         GRINDING_RECIPES.put(ModItems.BONDED_RUBY, ModItems.RUBY_SHARD);
@@ -52,6 +56,8 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
         GRINDING_RECIPES.put(ModItems.BONDED_GREEN_GARNET, ModItems.RAW_GREEN_GARNET);
         GRINDING_RECIPES.put(ModItems.BONDED_RED_GARNET, ModItems.RAW_RED_GARNET);
         GRINDING_RECIPES.put(ModItems.BONDED_YELLOW_GARNET, ModItems.RAW_YELLOW_GARNET);
+        GRINDING_RECIPES.put(ModItems.BONDED_TANZANITE, ModItems.TANZANITE);
+
     }
 
     public GemGrindStone(Properties pProperties) {
@@ -113,8 +119,13 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hitResult) {
         ItemStack heldStack = player.getItemInHand(player.getUsedItemHand());
+        Item heldItem = heldStack.getItem();
 
-        Item outputItem = getOutputItem(heldStack.getItem());
+        System.out.println("Held item: " + heldItem);
+        System.out.println("Is it BONDED_DIAMOND? " + (heldItem == ModItems.BONDED_DIAMOND.get()));
+
+        Item outputItem = getOutputItem(heldItem);
+        System.out.println("Output item: " + outputItem);
 
         if (outputItem != null) {
             processConversion(world, pos, player, heldStack, outputItem);
@@ -152,12 +163,30 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
     }
 
     private Item getOutputItem(Item input) {
-        return GRINDING_RECIPES.entrySet().stream()
-                .filter(entry -> entry.getKey().get() == input)
-                .map(entry -> entry.getValue().get())
-                .findFirst()
-                .orElse(null);
+        System.out.println("Searching for output item for: " + input);
+
+        // Zuerst in GRINDING_RECIPES suchen
+        for (Map.Entry<RegistryObject<Item>, RegistryObject<Item>> entry : GRINDING_RECIPES.entrySet()) {
+            if (entry.getKey().get() == input) {
+                System.out.println("Found in GRINDING_RECIPES: " + entry.getValue().get());
+                return entry.getValue().get();
+            }
+        }
+
+        // Dann in VANILLA_GRINDING_RECIPES suchen
+        Item result = VANILLA_GRINDING_RECIPES.get(input);
+        System.out.println("Found in VANILLA_GRINDING_RECIPES: " + result);
+        return result;
     }
+    public static void initializeRecipes() {
+        VANILLA_GRINDING_RECIPES.put(ModItems.BONDED_DIAMOND.get(), Items.DIAMOND);
+        System.out.println("VANILLA_GRINDING_RECIPES initialized with: " + VANILLA_GRINDING_RECIPES);
+    }
+
+
+
+
+
 }
 
 

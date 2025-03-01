@@ -1,8 +1,20 @@
 {
   "replace": false,
   "values": [
-    "gemsoftheworld:ruby",
+    "gemsoftheworld:gems",
+    "gemsoftheworld:amber",
     "gemsoftheworld:sapphire",
-    "gemsoftheworld:amber"
+    "gemsoftheworld:alexandrite",
+    "gemsoftheworld:pink_garnet",
+    "gemsoftheworld:red_garnet",
+    "gemsoftheworld:green_garnet",
+    "gemsoftheworld:yellow_garnet",
+    "gemsoftheworld:bonded_ruby",
+    "gemsoftheworld:bonded_sapphire",
+    "gemsoftheworld:bonded_alexandrite",
+    "gemsoftheworld:bonded_pink_garnet",
+    "gemsoftheworld:bonded_red_garnet",
+    "gemsoftheworld:bonded_yellow_garnet",
+    "gemsoftheworld:bonded_green_garnet"
   ]
 }

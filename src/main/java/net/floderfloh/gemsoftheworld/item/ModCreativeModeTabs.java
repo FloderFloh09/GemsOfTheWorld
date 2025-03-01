@@ -35,6 +35,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
                         output.accept(ModItems.RAW_PINK_GARNET.get());
                         output.accept(ModItems.PINK_GARNET.get());
+                        output.accept(ModItems.RAW_CITRINE.get());
+                        output.accept(ModItems.CITRINE.get());
+                        output.accept(ModItems.BONDED_TANZANITE.get());
+                        output.accept(ModItems.TANZANITE.get());
+                        output.accept(ModItems.BONDED_DIAMOND.get());
                         output.accept(ModItems.WOOD_CHISEL.get());
                         output.accept(ModItems.STONE_CHISEL.get());
                         output.accept(ModItems.IRON_CHISEL.get());
@@ -42,6 +47,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NETHERITE_CHISEL.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
                         output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        output.accept(ModBlocks.TANZANITE_BLOCK.get());
                         output.accept(ModBlocks.CHISELED_SAPPHIRE.get());
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.RUBY_DEEPSLATE_ORE.get());
@@ -87,6 +93,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.YELLOW_GARNET_BLOCK.get());
                         output.accept(ModBlocks.YELLOW_GARNET_ORE.get());
                         output.accept(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_CITRINE_BLOCK.get());
+                        output.accept(ModBlocks.CITRINE_BLOCK.get());
+                        output.accept(ModBlocks.CITRINE_ORE.get());
+                        output.accept(ModBlocks.CITRINE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.SAPPHIRE_ORE.get());
+                        output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.TANZANITE_ORE.get());
+                        output.accept(ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
 
 
                     }).build());

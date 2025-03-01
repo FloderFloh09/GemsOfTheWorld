@@ -24,7 +24,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         List<ItemLike> RUBY_SMELTABLES = List.of(ModBlocks.RUBY_ORE.get(), ModBlocks.RUBY_DEEPSLATE_ORE.get());
         List<ItemLike> AMBER_SMELTABLES = List.of(ModBlocks.AMBER_STONE.get(), ModBlocks.DEEPSLATE_AMBER.get());
-        List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.BONDED_SAPPHIRE.get());
+        List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModBlocks.SAPPHIRE_ORE.get(), ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
         List<ItemLike> ALEX_SMELTABLES = List.of(ModItems.RAW_ALEXANDRITE.get(),ModBlocks.ALEXANDRITE_ORE.get(),
                 ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
         List<ItemLike> PG_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET.get(),ModBlocks.PINK_GARNET_ORE.get(),
@@ -35,6 +35,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get());
         List<ItemLike> YG_SMELTABLES = List.of(ModItems.RAW_YELLOW_GARNET.get(),ModBlocks.YELLOW_GARNET_ORE.get(),
                 ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get());
+        List<ItemLike> CITRINE_SMELTABLES = List.of(ModItems.RAW_CITRINE.get(),ModBlocks.CITRINE_ORE.get(),
+                ModBlocks.CITRINE_DEEPSLATE_ORE.get());
+        List<ItemLike> TANZANITE_SMELTABLES = List.of(ModBlocks.TANZANITE_ORE.get(),
+                ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -110,6 +114,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.RAW_YELLOW_GARNET.get())
                 .unlockedBy(getHasName(ModItems.RAW_YELLOW_GARNET.get()), has(ModItems.RAW_YELLOW_GARNET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CITRINE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.CITRINE.get())
+                .unlockedBy(getHasName(ModItems.CITRINE.get()), has(ModItems.CITRINE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_CITRINE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RAW_CITRINE.get())
+                .unlockedBy(getHasName(ModItems.RAW_CITRINE.get()), has(ModItems.RAW_CITRINE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TANZANITE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.TANZANITE.get())
+                .unlockedBy(getHasName(ModItems.TANZANITE.get()), has(ModItems.TANZANITE.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
@@ -158,7 +180,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get()), has(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_yellow_garnet_from_raw_yellow_garnet_block");
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_GARNET.get(), 9)
                 .requires(ModBlocks.GREEN_GARNET_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.GREEN_GARNET_BLOCK.get()), has(ModBlocks.GREEN_GARNET_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":green_garnet_from_green_garnet_block");
@@ -167,6 +189,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_GREEN_GARNET_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_GREEN_GARNET_BLOCK.get()), has(ModBlocks.RAW_GREEN_GARNET_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_green_garnet_from_raw_green_garnet_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CITRINE.get(), 9)
+                .requires(ModBlocks.CITRINE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.CITRINE_BLOCK.get()), has(ModBlocks.CITRINE_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":citrine_from_citrine_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_CITRINE.get(), 9)
+                .requires(ModBlocks.RAW_CITRINE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_CITRINE_BLOCK.get()), has(ModBlocks.RAW_CITRINE_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":raw_citrine_from_raw_citrine_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TANZANITE.get(), 9)
+                .requires(ModBlocks.TANZANITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.TANZANITE_BLOCK.get()), has(ModBlocks.TANZANITE_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":tanzanite_from_tanzanite_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
                 .requires(ModBlocks.AMBER_BLOCK.get())
@@ -196,6 +230,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, RG_SMELTABLES, RecipeCategory.MISC, ModItems.RED_GARNET.get(), 0.25f, 100, "garnet");
         oreSmelting(pRecipeOutput, YG_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 0.25f, 200,"garnet");
         oreBlasting(pRecipeOutput, YG_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_GARNET.get(), 0.25f, 100, "garnet");
+        oreSmelting(pRecipeOutput, CITRINE_SMELTABLES, RecipeCategory.MISC, ModItems.CITRINE.get(), 1.4f, 180,"citrine");
+        oreBlasting(pRecipeOutput, CITRINE_SMELTABLES, RecipeCategory.MISC, ModItems.CITRINE.get(), 1.4f, 60, "citrine");
+        oreSmelting(pRecipeOutput, TANZANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TANZANITE.get(), 0.4f, 200,"tanzanite");
+        oreBlasting(pRecipeOutput, TANZANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TANZANITE.get(), 0.4f, 100, "tanzanite");
 
 
 

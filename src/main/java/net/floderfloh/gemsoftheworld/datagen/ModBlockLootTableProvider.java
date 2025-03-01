@@ -29,6 +29,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.RUBY_BLOCK.get());
+        dropSelf(ModBlocks.TANZANITE_BLOCK.get());
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
@@ -40,6 +41,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_GREEN_GARNET_BLOCK.get());
         dropSelf(ModBlocks.YELLOW_GARNET_BLOCK.get());
         dropSelf(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.CITRINE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_CITRINE_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
@@ -48,29 +51,41 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(ModBlocks.DEEPSLATE_AMBER.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
-                block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY_SHARD.get()));
+                block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.BONDED_RUBY.get()));
         this.add(ModBlocks.RUBY_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.RUBY_SHARD.get(), 1, 2));
+                block -> createMultipleOreDrops(ModBlocks.RUBY_DEEPSLATE_ORE.get(), ModItems.BONDED_RUBY.get(), 1, 2));
         this.add(ModBlocks.ALEXANDRITE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.BONDED_ALEXANDRITE.get(), 1, 3));
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.BONDED_ALEXANDRITE.get(), 1, 3));
         this.add(ModBlocks.PINK_GARNET_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_ORE.get(), ModItems.BONDED_PINK_GARNET.get(), 1, 3));
         this.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_PINK_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.PINK_GARNET_DEEPSLATE_ORE.get(), ModItems.BONDED_PINK_GARNET.get(), 1, 3));
         this.add(ModBlocks.RED_GARNET_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_ORE.get(), ModItems.RAW_RED_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_ORE.get(), ModItems.BONDED_RED_GARNET.get(), 1, 3));
         this.add(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_RED_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.RED_GARNET_DEEPSLATE_ORE.get(), ModItems.BONDED_RED_GARNET.get(), 1, 3));
         this.add(ModBlocks.GREEN_GARNET_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_ORE.get(), ModItems.RAW_GREEN_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_ORE.get(), ModItems.BONDED_GREEN_GARNET.get(), 1, 3));
         this.add(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_GREEN_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.GREEN_GARNET_DEEPSLATE_ORE.get(), ModItems.BONDED_GREEN_GARNET.get(), 1, 3));
         this.add(ModBlocks.YELLOW_GARNET_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_ORE.get(), ModItems.RAW_YELLOW_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_ORE.get(), ModItems.BONDED_YELLOW_GARNET.get(), 1, 3));
         this.add(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get(), ModItems.RAW_YELLOW_GARNET.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get(), ModItems.BONDED_YELLOW_GARNET.get(), 1, 3));
+        this.add(ModBlocks.CITRINE_ORE.get(),
+                block -> createOreDrop(ModBlocks.CITRINE_ORE.get(), ModItems.RAW_CITRINE.get()));
+        this.add(ModBlocks.CITRINE_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.CITRINE_DEEPSLATE_ORE.get(), ModItems.RAW_CITRINE.get()));
+        this.add(ModBlocks.SAPPHIRE_ORE.get(),
+                block -> createOreDrop(ModBlocks.SAPPHIRE_ORE.get(), ModItems.BONDED_SAPPHIRE.get()));
+        this.add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get(), ModItems.BONDED_SAPPHIRE.get()));
+        this.add(ModBlocks.TANZANITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.TANZANITE_ORE.get(), ModItems.BONDED_TANZANITE.get()));
+        this.add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.TANZANITE_DEEPSLATE_ORE.get(), ModItems.BONDED_TANZANITE.get()));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

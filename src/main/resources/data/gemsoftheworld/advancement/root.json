@@ -80,6 +80,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "citrine": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:citrine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "bonded_ruby": {
       "conditions": {
         "items": [
@@ -149,11 +159,38 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_tanzanite": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_tanzanite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_diamond": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_diamond"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tanzanite": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:tanzanite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
-
-
-
-},
+  },
   "display": {
     "background": "gemsoftheworld:textures/block/ruby_block.png",
     "description": {
@@ -178,13 +215,17 @@
       "red_garnet",
       "green_garnet",
       "yellow_garnet",
+      "citrine",
+      "tanzanite",
       "bonded_ruby",
       "bonded_sapphire",
       "bonded_alexandrite",
       "bonded_pink_garnet",
       "bonded_red_garnet",
       "bonded_yellow_garnet",
-      "bonded_green_garnet"
+      "bonded_green_garnet",
+      "bonded_tanzanite",
+      "bonded_diamond"
     ]
   ],
   "sends_telemetry_event": true
