@@ -39,6 +39,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CITRINE.get());
                         output.accept(ModItems.BONDED_TANZANITE.get());
                         output.accept(ModItems.TANZANITE.get());
+                        output.accept(ModItems.BONDED_PARAIBA_TOURMALINE.get());
+                        output.accept(ModItems.PARAIBA_TOURMALINE.get());
                         output.accept(ModItems.BONDED_DIAMOND.get());
                         output.accept(ModItems.WOOD_CHISEL.get());
                         output.accept(ModItems.STONE_CHISEL.get());
@@ -101,6 +103,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.TANZANITE_ORE.get());
                         output.accept(ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
+                        output.accept(ModBlocks.PARAIBA_TOURMALINE_ORE.get());
+                        output.accept(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
 
 
                     }).build());

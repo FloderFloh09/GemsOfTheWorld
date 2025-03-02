@@ -43,6 +43,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_YELLOW_GARNET_BLOCK.get());
         dropSelf(ModBlocks.CITRINE_BLOCK.get());
         dropSelf(ModBlocks.RAW_CITRINE_BLOCK.get());
+        dropSelf(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
@@ -86,6 +87,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.TANZANITE_ORE.get(), ModItems.BONDED_TANZANITE.get()));
         this.add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get(),
                 block -> createOreDrop(ModBlocks.TANZANITE_DEEPSLATE_ORE.get(), ModItems.BONDED_TANZANITE.get()));
+        this.add(ModBlocks.PARAIBA_TOURMALINE_ORE.get(),
+                block -> createOreDrop(ModBlocks.PARAIBA_TOURMALINE_ORE.get(), ModItems.BONDED_PARAIBA_TOURMALINE.get()));
+        this.add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get(), ModItems.BONDED_PARAIBA_TOURMALINE.get()));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

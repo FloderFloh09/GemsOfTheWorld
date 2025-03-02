@@ -91,6 +91,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_TANZANITE = ITEMS.register("bonded_tanzanite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PARAIBA_TOURMALINE = ITEMS.register("paraiba_tourmaline",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_PARAIBA_TOURMALINE = ITEMS.register("bonded_paraiba_tourmaline",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_DIAMOND = ITEMS.register("bonded_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",

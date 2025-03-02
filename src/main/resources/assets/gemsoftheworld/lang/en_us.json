@@ -23,6 +23,8 @@
   "item.gemsoftheworld.raw_citrine": "Raw Citrine",
   "item.gemsoftheworld.tanzanite": "Tanzanite",
   "item.gemsoftheworld.bonded_tanzanite": "Bonded Tanzanite",
+  "item.gemsoftheworld.paraiba_tourmaline": "Paraiba Tourmaline",
+  "item.gemsoftheworld.bonded_paraiba_tourmaline": "Bonded Paraiba Tourmaline",
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
@@ -93,6 +95,12 @@
   "block.gemsoftheworld.deepslate_citrine_ore": "Citrine Deepslate Ore",
   "block.gemsoftheworld.sapphire_ore": "Sapphire Ore",
   "block.gemsoftheworld.deepslate_sapphire_ore": "Sapphire Deepslate Ore",
+  "block.gemsoftheworld.paraiba_tourmaline_ore": "Paraiba Tourmaline Ore",
+  "block.gemsoftheworld.paraiba_tourmaline_deepslate_ore": "Paraiba Tourmaline Deepslate Ore",
+  "block.gemsoftheworld.paraiba_tourmaline_block": "Paraiba Tourmaline Block",
+  "block.gemsoftheworld.tanzanite_ore": "Tanzanite Ore",
+  "block.gemsoftheworld.deepslate_tanzanite_ore": "Tanzanite Deepslate Ore",
+  "block.gemsoftheworld.tanzanite_block": "Tanzanite Block",
 
 
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",

@@ -55,7 +55,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.TANZANITE_BLOCK.get())
                 .add(ModBlocks.TANZANITE_ORE.get())
-                .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_ORE.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());;
+
 
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -80,7 +84,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CITRINE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.TANZANITE_BLOCK.get())
                 .add(ModBlocks.TANZANITE_ORE.get())
-                .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
 
 
 
@@ -100,7 +105,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.YELLOW_GARNET_ORE.get())
                 .add(ModBlocks.YELLOW_GARNET_DEEPSLATE_ORE.get())
                 .add(ModBlocks.SAPPHIRE_ORE.get())
-                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_ORE.get())
+                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

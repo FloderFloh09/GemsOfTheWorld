@@ -87,6 +87,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> TANZANITE_BLOCK = registerBlock("tanzanite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PARAIBA_TOURMALINE_BLOCK = registerBlock("paraiba_tourmaline_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> YELLOW_GARNET_ORE = registerBlock("yellow_garnet_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -129,6 +132,12 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> TANZANITE_DEEPSLATE_ORE = registerBlock("deepslate_tanzanite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> PARAIBA_TOURMALINE_ORE = registerBlock("paraiba_tourmaline_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PARAIBA_TOURMALINE_DEEPSLATE_ORE = registerBlock("paraiba_tourmaline_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 

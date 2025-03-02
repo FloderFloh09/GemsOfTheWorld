@@ -189,6 +189,26 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_paraiba": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_paraiba_tourmaline"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "paraiba": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:paraiba_tourmaline"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -225,7 +245,9 @@
       "bonded_yellow_garnet",
       "bonded_green_garnet",
       "bonded_tanzanite",
-      "bonded_diamond"
+      "bonded_diamond",
+      "paraiba",
+      "bonded_paraiba"
     ]
   ],
   "sends_telemetry_event": true

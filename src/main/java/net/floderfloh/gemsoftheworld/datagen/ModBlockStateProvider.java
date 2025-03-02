@@ -34,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_CITRINE_BLOCK);
         blockWithItem(ModBlocks.CITRINE_BLOCK);
         blockWithItem(ModBlocks.TANZANITE_BLOCK);
+        blockWithItem(ModBlocks.PARAIBA_TOURMALINE_BLOCK);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
@@ -53,6 +54,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TANZANITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
         blockWithItem(ModBlocks.SAPPHIRE_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.PARAIBA_TOURMALINE_ORE);
+        blockWithItem(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.AMBER_STONE);
         blockWithItem(ModBlocks.DEEPSLATE_AMBER);
         blockWithItem(ModBlocks.AMBER_BRICKS);

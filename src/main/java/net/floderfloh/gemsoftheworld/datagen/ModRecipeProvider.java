@@ -39,6 +39,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.CITRINE_DEEPSLATE_ORE.get());
         List<ItemLike> TANZANITE_SMELTABLES = List.of(ModBlocks.TANZANITE_ORE.get(),
                 ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
+        List<ItemLike> PARAIBA_SMELTABLES = List.of(ModBlocks.PARAIBA_TOURMALINE_ORE.get(),
+                ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -132,6 +134,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.TANZANITE.get())
                 .unlockedBy(getHasName(ModItems.TANZANITE.get()), has(ModItems.TANZANITE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.PARAIBA_TOURMALINE.get())
+                .unlockedBy(getHasName(ModItems.PARAIBA_TOURMALINE.get()), has(ModItems.PARAIBA_TOURMALINE.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
@@ -201,6 +209,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.TANZANITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.TANZANITE_BLOCK.get()), has(ModBlocks.TANZANITE_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":tanzanite_from_tanzanite_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PARAIBA_TOURMALINE.get(), 9)
+                .requires(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get()), has(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":paraiba_tourmaline_from_paraiba_tourmaline_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
                 .requires(ModBlocks.AMBER_BLOCK.get())
@@ -234,6 +246,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, CITRINE_SMELTABLES, RecipeCategory.MISC, ModItems.CITRINE.get(), 1.4f, 60, "citrine");
         oreSmelting(pRecipeOutput, TANZANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TANZANITE.get(), 0.4f, 200,"tanzanite");
         oreBlasting(pRecipeOutput, TANZANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TANZANITE.get(), 0.4f, 100, "tanzanite");
+        oreSmelting(pRecipeOutput, PARAIBA_SMELTABLES, RecipeCategory.MISC, ModItems.PARAIBA_TOURMALINE.get(), 0.4f, 300,"paraiba");
+        oreBlasting(pRecipeOutput, PARAIBA_SMELTABLES, RecipeCategory.MISC, ModItems.PARAIBA_TOURMALINE.get(), 0.4f, 200, "paraiba");
 
 
 

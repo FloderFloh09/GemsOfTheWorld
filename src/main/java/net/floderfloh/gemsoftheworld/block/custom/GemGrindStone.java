@@ -57,6 +57,7 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
         GRINDING_RECIPES.put(ModItems.BONDED_RED_GARNET, ModItems.RAW_RED_GARNET);
         GRINDING_RECIPES.put(ModItems.BONDED_YELLOW_GARNET, ModItems.RAW_YELLOW_GARNET);
         GRINDING_RECIPES.put(ModItems.BONDED_TANZANITE, ModItems.TANZANITE);
+        GRINDING_RECIPES.put(ModItems.BONDED_PARAIBA_TOURMALINE, ModItems.PARAIBA_TOURMALINE);
 
     }
 
