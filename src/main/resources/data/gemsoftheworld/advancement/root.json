@@ -269,6 +269,16 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "aquamarine": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:aquamarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -313,7 +323,8 @@
       "blue_spinel",
       "bonded_blue_spinel",
       "black_spinel",
-      "bonded_black_spinel"
+      "bonded_black_spinel",
+      "aquamarine"
     ]
   ],
   "sends_telemetry_event": true

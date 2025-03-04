@@ -48,6 +48,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLACK_SPINEL_BLOCK.get());
         dropSelf(ModBlocks.BLUE_SPINEL_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
+        dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
         dropSelf(ModBlocks.AMBER_BRICKS.get());
@@ -106,6 +107,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.BLACK_SPINEL_ORE.get(), ModItems.BONDED_BLACK_SPINEL.get()));
         this.add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(),
                 block -> createOreDrop(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(), ModItems.BONDED_BLACK_SPINEL.get()));
+        this.add(ModBlocks.AQUAMARINE_ORE.get(),
+                block -> createOreDrop(ModBlocks.AQUAMARINE_ORE.get(), ModItems.AQUAMARINE.get()));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

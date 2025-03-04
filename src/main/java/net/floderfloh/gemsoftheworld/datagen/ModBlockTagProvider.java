@@ -67,7 +67,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get())
                 .add(ModBlocks.BLACK_SPINEL_BLOCK.get())
                 .add(ModBlocks.BLACK_SPINEL_ORE.get())
-                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());;
+                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.AQUAMARINE_BLOCK.get())
+                .add(ModBlocks.AQUAMARINE_ORE.get());;
 
 
 
@@ -97,7 +99,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
                 .add(ModBlocks.PINK_SPINEL_BLOCK.get())
                 .add(ModBlocks.BLUE_SPINEL_BLOCK.get())
-                .add(ModBlocks.BLACK_SPINEL_BLOCK.get());
+                .add(ModBlocks.BLACK_SPINEL_BLOCK.get())
+                .add(ModBlocks.AQUAMARINE_BLOCK.get());
 
 
 
@@ -125,7 +128,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLUE_SPINEL_ORE.get())
                 .add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get())
                 .add(ModBlocks.BLACK_SPINEL_ORE.get())
-                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());
+                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.AQUAMARINE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

@@ -31,6 +31,7 @@
   "item.gemsoftheworld.bonded_blue_spinel": "Bonded Blue Spinel",
   "item.gemsoftheworld.black_spinel": "Black Spinel",
   "item.gemsoftheworld.bonded_black_spinel": "Bonded Black Spinel",
+  "item.gemsoftheworld.aquamarine": "Aquamarine",
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
@@ -116,6 +117,8 @@
   "block.gemsoftheworld.black_spinel_ore": "Black Spinel Ore",
   "block.gemsoftheworld.black_spinel_deepslate_ore": "Black Spinel Deepslate Ore",
   "block.gemsoftheworld.black_spinel_block": "Black Spinel Block",
+  "block.gemsoftheworld.aquamarine_block": "Aquamarine Block",
+  "block.gemsoftheworld.aquamarine_ore": "Aquamarine Ore",
 
 
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",
@@ -142,5 +145,7 @@
 
 
 
-  "creativetab.gemsoftheworld": "Gems of the World - Items"
+  "creativetabi.gemsoftheworld": "Gems of the World - Items",
+  "creativetabb.gemsoftheworld": "Gems of the World - Blocks",
+  "creativetabo.gemsoftheworld": "Gems of the World - Other"
 }

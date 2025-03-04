@@ -112,6 +112,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_GREEN_GARNET_BLOCK = registerBlock("raw_green_garnet_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> AQUAMARINE_BLOCK = registerBlock("aquamarine_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
 
     public static final RegistryObject<Block> GREEN_GARNET_ORE = registerBlock("green_garnet_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -167,6 +171,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_SPINEL_DEEPSLATE_ORE = registerBlock("black_spinel_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> AQUAMARINE_ORE = registerBlock("aquamarine_ore",
+            () -> new DropExperienceBlock(UniformInt.of(6, 8), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GEM_GRINDSTONE = registerBlock("gem_grindstone",
             () -> new GemGrindStone(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));

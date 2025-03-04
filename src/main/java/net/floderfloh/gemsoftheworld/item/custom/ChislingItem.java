@@ -80,7 +80,7 @@ public class ChislingItem extends DiggerItem {
     );
 
     public ChislingItem(Tier pTier, Properties pProperties) {
-        super(pTier, BlockTags.MINEABLE_WITH_PICKAXE, pProperties);
+        super(pTier, BlockTags.AIR, pProperties);
     }
 
     @Override

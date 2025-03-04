@@ -47,6 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.BLACK_SPINEL_ORE.get());
         List<ItemLike> BLUES_SMELTABLES = List.of(ModBlocks.BLUE_SPINEL_ORE.get(),
                 ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get());
+        List<ItemLike> AQUAMARINE_SMELTABLES = List.of(ModBlocks.AQUAMARINE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -164,6 +165,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.BLACK_SPINEL.get())
                 .unlockedBy(getHasName(ModItems.BLACK_SPINEL.get()), has(ModItems.BLACK_SPINEL.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AQUAMARINE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.AQUAMARINE.get())
+                .unlockedBy(getHasName(ModItems.AQUAMARINE.get()), has(ModItems.AQUAMARINE.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
@@ -250,15 +257,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BLUE_SPINEL_BLOCK.get()), has(ModBlocks.BLUE_SPINEL_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":blue_spinel_from_blue_spinel_block");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 4)
                 .requires(ModBlocks.AMBER_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.AMBER_BLOCK.get()), has(ModBlocks.AMBER_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":amber_from_amber_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AQUAMARINE.get(), 9)
+                .requires(ModBlocks.AQUAMARINE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.AQUAMARINE_BLOCK.get()), has(ModBlocks.AQUAMARINE_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":aquamarine_from_aquamarine_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AMBER_BLOCK.get())
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("AAA")
+                .pattern("AA")
+                .pattern("AA")
                 .define('A', ModItems.AMBER.get())
                 .unlockedBy(getHasName(ModItems.AMBER.get()), has(ModItems.AMBER.get())).save(pRecipeOutput);
 
@@ -290,6 +300,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, BLACKS_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_SPINEL.get(), 0.4f, 200, "spinel");
         oreSmelting(pRecipeOutput, BLUES_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 0.4f, 300,"spinel");
         oreBlasting(pRecipeOutput, BLUES_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 0.4f, 200, "spinel");
+        oreSmelting(pRecipeOutput, AQUAMARINE_SMELTABLES, RecipeCategory.MISC, ModItems.AQUAMARINE.get(), 0.8f, 200,"aquamarine");
+        oreBlasting(pRecipeOutput, AQUAMARINE_SMELTABLES, RecipeCategory.MISC, ModItems.AQUAMARINE.get(), 0.8f, 100, "aquamarine");
 
 
 

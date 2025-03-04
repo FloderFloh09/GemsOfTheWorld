@@ -38,6 +38,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PINK_SPINEL_BLOCK);
         blockWithItem(ModBlocks.BLACK_SPINEL_BLOCK);
         blockWithItem(ModBlocks.BLUE_SPINEL_BLOCK);
+        blockWithItem(ModBlocks.AQUAMARINE_BLOCK);
+        blockWithItem(ModBlocks.AQUAMARINE_ORE);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);

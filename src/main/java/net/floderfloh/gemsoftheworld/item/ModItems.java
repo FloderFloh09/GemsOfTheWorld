@@ -107,6 +107,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_BLACK_SPINEL = ITEMS.register("bonded_black_spinel",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AQUAMARINE = ITEMS.register("aquamarine",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_DIAMOND = ITEMS.register("bonded_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
