@@ -29,6 +29,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -58,6 +59,9 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
         GRINDING_RECIPES.put(ModItems.BONDED_YELLOW_GARNET, ModItems.RAW_YELLOW_GARNET);
         GRINDING_RECIPES.put(ModItems.BONDED_TANZANITE, ModItems.TANZANITE);
         GRINDING_RECIPES.put(ModItems.BONDED_PARAIBA_TOURMALINE, ModItems.PARAIBA_TOURMALINE);
+        GRINDING_RECIPES.put(ModItems.BONDED_PINK_SPINEL, ModItems.PINK_SPINEL);
+        GRINDING_RECIPES.put(ModItems.BONDED_BLACK_SPINEL, ModItems.BLACK_SPINEL);
+        GRINDING_RECIPES.put(ModItems.BONDED_BLUE_SPINEL, ModItems.BLUE_SPINEL);
 
     }
 
@@ -68,9 +72,21 @@ public class GemGrindStone extends HorizontalDirectionalBlock {
 
     private static final Map<AttachFace, VoxelShape> SHAPES = new EnumMap<>(AttachFace.class);
     static {
-        SHAPES.put(AttachFace.FLOOR, Block.box(0, 0, 0, 16, 8, 16));
-        SHAPES.put(AttachFace.WALL, Block.box(0, 0, 0, 16, 16, 8));
-        SHAPES.put(AttachFace.CEILING, Block.box(0, 8, 0, 16, 16, 16));
+        SHAPES.put(AttachFace.FLOOR, Shapes.or(
+                Block.box(4, 0, 4, 12, 2, 12),  // Standfuß
+                Block.box(5, 2, 5, 11, 10, 11), // Mittelteil (Schleifstein)
+                Block.box(3, 6, 3, 13, 8, 13)   // Horizontale Achse/Stütze
+        ));
+        SHAPES.put(AttachFace.WALL, Shapes.or(
+                Block.box(4, 4, 0, 12, 12, 2),
+                Block.box(5, 5, 2, 11, 11, 10),
+                Block.box(3, 6, 10, 13, 8, 12)
+        ));
+        SHAPES.put(AttachFace.CEILING, Shapes.or(
+                Block.box(4, 14, 4, 12, 16, 12),
+                Block.box(5, 6, 5, 11, 14, 11),
+                Block.box(3, 8, 3, 13, 10, 13)
+        ));
     }
 
     @Override

@@ -44,6 +44,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CITRINE_BLOCK.get());
         dropSelf(ModBlocks.RAW_CITRINE_BLOCK.get());
         dropSelf(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
+        dropSelf(ModBlocks.PINK_SPINEL_BLOCK.get());
+        dropSelf(ModBlocks.BLACK_SPINEL_BLOCK.get());
+        dropSelf(ModBlocks.BLUE_SPINEL_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
@@ -91,6 +94,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.PARAIBA_TOURMALINE_ORE.get(), ModItems.BONDED_PARAIBA_TOURMALINE.get()));
         this.add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get(),
                 block -> createOreDrop(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get(), ModItems.BONDED_PARAIBA_TOURMALINE.get()));
+        this.add(ModBlocks.PINK_SPINEL_ORE.get(),
+                block -> createOreDrop(ModBlocks.PINK_SPINEL_ORE.get(), ModItems.BONDED_PINK_SPINEL.get()));
+        this.add(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get(), ModItems.BONDED_PINK_SPINEL.get()));
+        this.add(ModBlocks.BLUE_SPINEL_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLUE_SPINEL_ORE.get(), ModItems.BONDED_BLUE_SPINEL.get()));
+        this.add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get(), ModItems.BONDED_BLUE_SPINEL.get()));
+        this.add(ModBlocks.BLACK_SPINEL_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLACK_SPINEL_ORE.get(), ModItems.BONDED_BLACK_SPINEL.get()));
+        this.add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(), ModItems.BONDED_BLACK_SPINEL.get()));
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

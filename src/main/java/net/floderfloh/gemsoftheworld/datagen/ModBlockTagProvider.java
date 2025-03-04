@@ -58,7 +58,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
                 .add(ModBlocks.PARAIBA_TOURMALINE_ORE.get())
-                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());;
+                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_SPINEL_BLOCK.get())
+                .add(ModBlocks.PINK_SPINEL_ORE.get())
+                .add(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BLUE_SPINEL_BLOCK.get())
+                .add(ModBlocks.BLUE_SPINEL_ORE.get())
+                .add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BLACK_SPINEL_BLOCK.get())
+                .add(ModBlocks.BLACK_SPINEL_ORE.get())
+                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());;
 
 
 
@@ -85,7 +94,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.TANZANITE_BLOCK.get())
                 .add(ModBlocks.TANZANITE_ORE.get())
                 .add(ModBlocks.TANZANITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
+                .add(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
+                .add(ModBlocks.PINK_SPINEL_BLOCK.get())
+                .add(ModBlocks.BLUE_SPINEL_BLOCK.get())
+                .add(ModBlocks.BLACK_SPINEL_BLOCK.get());
 
 
 
@@ -107,7 +119,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_ORE.get())
                 .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.PARAIBA_TOURMALINE_ORE.get())
-                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_SPINEL_ORE.get())
+                .add(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BLUE_SPINEL_ORE.get())
+                .add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BLACK_SPINEL_ORE.get())
+                .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

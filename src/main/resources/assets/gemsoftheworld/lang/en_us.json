@@ -25,6 +25,12 @@
   "item.gemsoftheworld.bonded_tanzanite": "Bonded Tanzanite",
   "item.gemsoftheworld.paraiba_tourmaline": "Paraiba Tourmaline",
   "item.gemsoftheworld.bonded_paraiba_tourmaline": "Bonded Paraiba Tourmaline",
+  "item.gemsoftheworld.pink_spinel": "Pink Spinel",
+  "item.gemsoftheworld.bonded_pink_spinel": "Bonded Pink Spinel",
+  "item.gemsoftheworld.blue_spinel": "Blue Spinel",
+  "item.gemsoftheworld.bonded_blue_spinel": "Bonded Blue Spinel",
+  "item.gemsoftheworld.black_spinel": "Black Spinel",
+  "item.gemsoftheworld.bonded_black_spinel": "Bonded Black Spinel",
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
@@ -101,6 +107,15 @@
   "block.gemsoftheworld.tanzanite_ore": "Tanzanite Ore",
   "block.gemsoftheworld.deepslate_tanzanite_ore": "Tanzanite Deepslate Ore",
   "block.gemsoftheworld.tanzanite_block": "Tanzanite Block",
+  "block.gemsoftheworld.pink_spinel_ore": "Pink Spinel Ore",
+  "block.gemsoftheworld.pink_spinel_deepslate_ore": "Pink Spinel Deepslate Ore",
+  "block.gemsoftheworld.pink_spinel_block": "Pink Spinel Block",
+  "block.gemsoftheworld.blue_spinel_ore": "Blue Spinel Ore",
+  "block.gemsoftheworld.blue_spinel_deepslate_ore": "Blue Spinel Deepslate Ore",
+  "block.gemsoftheworld.blue_spinel_block": "Blue Spinel Block",
+  "block.gemsoftheworld.black_spinel_ore": "Black Spinel Ore",
+  "block.gemsoftheworld.black_spinel_deepslate_ore": "Black Spinel Deepslate Ore",
+  "block.gemsoftheworld.black_spinel_block": "Black Spinel Block",
 
 
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",
@@ -113,7 +128,7 @@
   "advancements.chiseling_amber.title": "The ancient blood of nature",
   "advancements.chiseling_amber.description": "Get amber by chiseling the amber stones.",
 
-  "advancements.root.description": "Obtain your first shiny gem.",
+  "advancements.root.description": "Obtain your first gem of the world.",
   "advancements.root.title": "Gems of the World",
 
   "bell_ringer.description": "AAAAAAAAAAAA",

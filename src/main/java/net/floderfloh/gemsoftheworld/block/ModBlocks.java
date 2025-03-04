@@ -90,6 +90,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> PARAIBA_TOURMALINE_BLOCK = registerBlock("paraiba_tourmaline_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_SPINEL_BLOCK = registerBlock("pink_spinel_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_SPINEL_BLOCK = registerBlock("blue_spinel_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_SPINEL_BLOCK = registerBlock("black_spinel_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> YELLOW_GARNET_ORE = registerBlock("yellow_garnet_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -138,6 +147,24 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PARAIBA_TOURMALINE_DEEPSLATE_ORE = registerBlock("paraiba_tourmaline_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> PINK_SPINEL_ORE = registerBlock("pink_spinel_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_SPINEL_DEEPSLATE_ORE = registerBlock("pink_spinel_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> BLUE_SPINEL_ORE = registerBlock("blue_spinel_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_SPINEL_DEEPSLATE_ORE = registerBlock("blue_spinel_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> BLACK_SPINEL_ORE = registerBlock("black_spinel_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_SPINEL_DEEPSLATE_ORE = registerBlock("black_spinel_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 

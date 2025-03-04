@@ -5,15 +5,29 @@
       "conditions": {
         "location": [
           {
-
             "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:budding_amethyst",
+                  "minecraft:amethyst_cluster",
+                  "minecraft:small_amethyst_bud",
+                  "minecraft:medium_amethyst_bud",
+                  "minecraft:large_amethyst_bud"
+
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
             "predicate": {
               "items": "gemsoftheworld:minerals"
             }
           }
         ]
       },
-      "trigger": "minecraft:using_item"
+      "trigger": "minecraft:item_used_on_block"
     }
   },
   "display": {

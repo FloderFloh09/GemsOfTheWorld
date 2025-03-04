@@ -41,6 +41,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.TANZANITE_DEEPSLATE_ORE.get());
         List<ItemLike> PARAIBA_SMELTABLES = List.of(ModBlocks.PARAIBA_TOURMALINE_ORE.get(),
                 ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
+        List<ItemLike> PS_SMELTABLES = List.of(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get(),
+                ModBlocks.PINK_SPINEL_ORE.get());
+        List<ItemLike> BLACKS_SMELTABLES = List.of(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(),
+                ModBlocks.BLACK_SPINEL_ORE.get());
+        List<ItemLike> BLUES_SMELTABLES = List.of(ModBlocks.BLUE_SPINEL_ORE.get(),
+                ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -140,6 +146,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.PARAIBA_TOURMALINE.get())
                 .unlockedBy(getHasName(ModItems.PARAIBA_TOURMALINE.get()), has(ModItems.PARAIBA_TOURMALINE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_SPINEL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.PINK_SPINEL.get())
+                .unlockedBy(getHasName(ModItems.PINK_SPINEL.get()), has(ModItems.PINK_SPINEL.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_SPINEL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.BLUE_SPINEL.get())
+                .unlockedBy(getHasName(ModItems.BLUE_SPINEL.get()), has(ModItems.BLUE_SPINEL.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_SPINEL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.BLACK_SPINEL.get())
+                .unlockedBy(getHasName(ModItems.BLACK_SPINEL.get()), has(ModItems.BLACK_SPINEL.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
@@ -213,6 +237,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get()), has(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":paraiba_tourmaline_from_paraiba_tourmaline_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_SPINEL.get(), 9)
+                .requires(ModBlocks.PINK_SPINEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PINK_SPINEL_BLOCK.get()), has(ModBlocks.PINK_SPINEL_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":pink_spinel_from_pink_spinel_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_SPINEL.get(), 9)
+                .requires(ModBlocks.BLACK_SPINEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.BLACK_SPINEL_BLOCK.get()), has(ModBlocks.BLACK_SPINEL_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + "black_spinel_from_black_spinel_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 9)
+                .requires(ModBlocks.BLUE_SPINEL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.BLUE_SPINEL_BLOCK.get()), has(ModBlocks.BLUE_SPINEL_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":blue_spinel_from_blue_spinel_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
                 .requires(ModBlocks.AMBER_BLOCK.get())
@@ -248,6 +284,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, TANZANITE_SMELTABLES, RecipeCategory.MISC, ModItems.TANZANITE.get(), 0.4f, 100, "tanzanite");
         oreSmelting(pRecipeOutput, PARAIBA_SMELTABLES, RecipeCategory.MISC, ModItems.PARAIBA_TOURMALINE.get(), 0.4f, 300,"paraiba");
         oreBlasting(pRecipeOutput, PARAIBA_SMELTABLES, RecipeCategory.MISC, ModItems.PARAIBA_TOURMALINE.get(), 0.4f, 200, "paraiba");
+        oreSmelting(pRecipeOutput, PS_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_SPINEL.get(), 0.4f, 300,"spinel");
+        oreBlasting(pRecipeOutput, PS_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_SPINEL.get(), 0.4f, 200, "spinel");
+        oreSmelting(pRecipeOutput, BLACKS_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_SPINEL.get(), 0.4f, 300,"spinel");
+        oreBlasting(pRecipeOutput, BLACKS_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_SPINEL.get(), 0.4f, 200, "spinel");
+        oreSmelting(pRecipeOutput, BLUES_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 0.4f, 300,"spinel");
+        oreBlasting(pRecipeOutput, BLUES_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 0.4f, 200, "spinel");
 
 
 

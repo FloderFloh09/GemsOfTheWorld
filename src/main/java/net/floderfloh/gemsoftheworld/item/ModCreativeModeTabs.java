@@ -41,6 +41,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TANZANITE.get());
                         output.accept(ModItems.BONDED_PARAIBA_TOURMALINE.get());
                         output.accept(ModItems.PARAIBA_TOURMALINE.get());
+                        output.accept(ModItems.BONDED_PINK_SPINEL.get());
+                        output.accept(ModItems.PINK_SPINEL.get());
+                        output.accept(ModItems.BONDED_BLUE_SPINEL.get());
+                        output.accept(ModItems.BLUE_SPINEL.get());
+                        output.accept(ModItems.BONDED_BLACK_SPINEL.get());
+                        output.accept(ModItems.BLACK_SPINEL.get());
                         output.accept(ModItems.BONDED_DIAMOND.get());
                         output.accept(ModItems.WOOD_CHISEL.get());
                         output.accept(ModItems.STONE_CHISEL.get());
@@ -106,6 +112,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PARAIBA_TOURMALINE_BLOCK.get());
                         output.accept(ModBlocks.PARAIBA_TOURMALINE_ORE.get());
                         output.accept(ModBlocks.PARAIBA_TOURMALINE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PINK_SPINEL_ORE.get());
+                        output.accept(ModBlocks.PINK_SPINEL_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.BLUE_SPINEL_ORE.get());
+                        output.accept(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.BLACK_SPINEL_ORE.get());
+                        output.accept(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PINK_SPINEL_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_SPINEL_BLOCK.get());
+                        output.accept(ModBlocks.BLACK_SPINEL_BLOCK.get());
+
 
 
                     }).build());

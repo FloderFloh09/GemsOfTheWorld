@@ -95,22 +95,34 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_PARAIBA_TOURMALINE = ITEMS.register("bonded_paraiba_tourmaline",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINK_SPINEL = ITEMS.register("pink_spinel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_PINK_SPINEL = ITEMS.register("bonded_pink_spinel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_SPINEL = ITEMS.register("blue_spinel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_BLUE_SPINEL = ITEMS.register("bonded_blue_spinel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_SPINEL = ITEMS.register("black_spinel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_BLACK_SPINEL = ITEMS.register("bonded_black_spinel",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_DIAMOND = ITEMS.register("bonded_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",
-            () -> new ChiselItem(Tiers.WOOD, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(Tiers.WOOD, 1, -2.5f))));
+            () -> new ChislingItem(Tiers.WOOD, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.STONE, 2, -2.5f))));
     public static final RegistryObject<Item> STONE_CHISEL = ITEMS.register("stone_chisel",
-            () -> new ChiselItem(Tiers.STONE, new Item.Properties()
+            () -> new ChislingItem(Tiers.STONE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.STONE, 2, -2.5f))));
     public static final RegistryObject<Item> IRON_CHISEL = ITEMS.register("iron_chisel",
-            () -> new ChiselItem(Tiers.IRON, new Item.Properties()
+            () -> new ChislingItem(Tiers.IRON, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.IRON, 3, -2.5f))));
     public static final RegistryObject<Item> DIAMOND_CHISEL = ITEMS.register("diamond_chisel",
-            () -> new ChiselItem(Tiers.DIAMOND, new Item.Properties()
+            () -> new ChislingItem(Tiers.DIAMOND, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 4, -2.5f))));
     public static final RegistryObject<Item> NETHERITE_CHISEL = ITEMS.register("netherite_chisel",
-            () -> new ChiselItem(Tiers.NETHERITE, new Item.Properties()
+            () -> new ChislingItem(Tiers.NETHERITE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4, -2.5f))));
 
 

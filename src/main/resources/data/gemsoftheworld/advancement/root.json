@@ -209,6 +209,66 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_pink_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_pink_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pink_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:pink_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_blue_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_blue_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blue_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:blue_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bonded_black_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:bonded_black_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "black_spinel": {
+      "conditions": {
+        "items": [
+          {
+            "item": "gemsoftheworld:black_spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -247,7 +307,13 @@
       "bonded_tanzanite",
       "bonded_diamond",
       "paraiba",
-      "bonded_paraiba"
+      "bonded_paraiba",
+      "pink_spinel",
+      "bonded_pink_spinel",
+      "blue_spinel",
+      "bonded_blue_spinel",
+      "black_spinel",
+      "bonded_black_spinel"
     ]
   ],
   "sends_telemetry_event": true
