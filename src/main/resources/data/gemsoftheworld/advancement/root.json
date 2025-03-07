@@ -1,281 +1,36 @@
 {
   "criteria": {
-    "ruby": {
+    "all_gems": {
       "conditions": {
         "items": [
-          {
-            "item": "gemsoftheworld:gems"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "amber": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:amber"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "sapphire": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:sapphire"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "alexandrite": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:alexandrite"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "pink_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:pink_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "red_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:red_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "green_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:green_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "yellow_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:yellow_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "citrine": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:citrine"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_ruby": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_ruby"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_sapphire": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_sapphire"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_alexandrite": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_alexandrite"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_pink_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_pink_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_red_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_red_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_yellow_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_yellow_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_green_garnet": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_green_garnet"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_tanzanite": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_tanzanite"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_diamond": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_diamond"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "tanzanite": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:tanzanite"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_paraiba": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_paraiba_tourmaline"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "paraiba": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:paraiba_tourmaline"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_pink_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_pink_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "pink_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:pink_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_blue_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_blue_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "blue_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:blue_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "bonded_black_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:bonded_black_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "black_spinel": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:black_spinel"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "aquamarine": {
-      "conditions": {
-        "items": [
-          {
-            "item": "gemsoftheworld:aquamarine"
-          }
+          { "item": "gemsoftheworld:ruby" },
+          { "item": "gemsoftheworld:amber" },
+          { "item": "gemsoftheworld:sapphire" },
+          { "item": "gemsoftheworld:alexandrite" },
+          { "item": "gemsoftheworld:pink_garnet" },
+          { "item": "gemsoftheworld:red_garnet" },
+          { "item": "gemsoftheworld:green_garnet" },
+          { "item": "gemsoftheworld:yellow_garnet" },
+          { "item": "gemsoftheworld:citrine" },
+          { "item": "gemsoftheworld:tanzanite" },
+          { "item": "gemsoftheworld:paraiba_tourmaline" },
+          { "item": "gemsoftheworld:pink_spinel" },
+          { "item": "gemsoftheworld:blue_spinel" },
+          { "item": "gemsoftheworld:black_spinel" },
+          { "item": "gemsoftheworld:aquamarine" },
+          { "item": "gemsoftheworld:bonded_ruby" },
+          { "item": "gemsoftheworld:bonded_sapphire" },
+          { "item": "gemsoftheworld:bonded_alexandrite" },
+          { "item": "gemsoftheworld:bonded_pink_garnet" },
+          { "item": "gemsoftheworld:bonded_red_garnet" },
+          { "item": "gemsoftheworld:bonded_yellow_garnet" },
+          { "item": "gemsoftheworld:bonded_green_garnet" },
+          { "item": "gemsoftheworld:bonded_tanzanite" },
+          { "item": "gemsoftheworld:bonded_diamond" },
+          { "item": "gemsoftheworld:bonded_paraiba_tourmaline" },
+          { "item": "gemsoftheworld:bonded_pink_spinel" },
+          { "item": "gemsoftheworld:bonded_blue_spinel" },
+          { "item": "gemsoftheworld:bonded_black_spinel" }
         ]
       },
       "trigger": "minecraft:inventory_changed"
@@ -295,37 +50,6 @@
       "translate": "advancements.root.title"
     }
   },
-  "requirements": [
-    [
-      "ruby",
-      "amber",
-      "sapphire",
-      "alexandrite",
-      "pink_garnet",
-      "red_garnet",
-      "green_garnet",
-      "yellow_garnet",
-      "citrine",
-      "tanzanite",
-      "bonded_ruby",
-      "bonded_sapphire",
-      "bonded_alexandrite",
-      "bonded_pink_garnet",
-      "bonded_red_garnet",
-      "bonded_yellow_garnet",
-      "bonded_green_garnet",
-      "bonded_tanzanite",
-      "bonded_diamond",
-      "paraiba",
-      "bonded_paraiba",
-      "pink_spinel",
-      "bonded_pink_spinel",
-      "blue_spinel",
-      "bonded_blue_spinel",
-      "black_spinel",
-      "bonded_black_spinel",
-      "aquamarine"
-    ]
-  ],
+  "requirements": [["all_gems"]],
   "sends_telemetry_event": true
 }

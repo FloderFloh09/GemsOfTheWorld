@@ -31,7 +31,21 @@
   "item.gemsoftheworld.bonded_blue_spinel": "Bonded Blue Spinel",
   "item.gemsoftheworld.black_spinel": "Black Spinel",
   "item.gemsoftheworld.bonded_black_spinel": "Bonded Black Spinel",
+  "item.gemsoftheworld.blue_topaz": "Blue Topaz",
+  "item.gemsoftheworld.brown_topaz": "Brown Topaz",
+  "item.gemsoftheworld.pink_topaz": "Pink Topaz",
+  "item.gemsoftheworld.yellow_topaz": "Yellow Topaz",
+  "item.gemsoftheworld.orange_topaz": "Orange Topaz",
+  "item.gemsoftheworld.colorless_topaz": "Colorless Topaz",
+  "item.gemsoftheworld.bonded_blue_topaz": "Bonded Blue Topaz",
+  "item.gemsoftheworld.bonded_yellow_topaz": "Bonded Yellow Topaz",
+  "item.gemsoftheworld.bonded_orange_topaz": "Bonded Orange Topaz",
+  "item.gemsoftheworld.bonded_pink_topaz": "Bonded Pink Topaz",
+  "item.gemsoftheworld.bonded_brown_topaz": "Bonded Brown Topaz",
+  "item.gemsoftheworld.bonded_colorless_topaz": "Bonded Colorless Topaz",
   "item.gemsoftheworld.aquamarine": "Aquamarine",
+
+
 
 
   "block.gemsoftheworld.ruby_block": "Ruby Block",
@@ -119,6 +133,25 @@
   "block.gemsoftheworld.black_spinel_block": "Black Spinel Block",
   "block.gemsoftheworld.aquamarine_block": "Aquamarine Block",
   "block.gemsoftheworld.aquamarine_ore": "Aquamarine Ore",
+  "block.gemsoftheworld.blue_topaz_block": "Blue Topaz Block",
+  "block.gemsoftheworld.brown_topaz_block": "Brown Topaz Block",
+  "block.gemsoftheworld.yellow_topaz_block": "Yellow Topaz Block",
+  "block.gemsoftheworld.pink_topaz_block": "Pink Topaz Block",
+  "block.gemsoftheworld.orange_topaz_block": "Orange Topaz Block",
+  "block.gemsoftheworld.colorless_topaz_block": "Colorless Topaz Block",
+  "block.gemsoftheworld.blue_topaz_ore": "Blue Topaz Ore",
+  "block.gemsoftheworld.brown_topaz_ore": "Brown Topaz Ore",
+  "block.gemsoftheworld.yellow_topaz_ore": "Yellow Topaz Ore",
+  "block.gemsoftheworld.pink_topaz_ore": "Pink Topaz Ore",
+  "block.gemsoftheworld.orange_topaz_ore": "Orange Topaz Ore",
+  "block.gemsoftheworld.colorless_topaz_ore": "Colorless Topaz Ore",
+  "block.gemsoftheworld.deepslate_blue_topaz_ore": "Blue Topaz Deepslate Ore",
+  "block.gemsoftheworld.deepslate_brown_topaz_ore": "Brown Topaz Deepslate Ore",
+  "block.gemsoftheworld.deepslate_yellow_topaz_ore": "Yellow Topaz Deepslate Ore",
+  "block.gemsoftheworld.deepslate_pink_topaz_ore": "Pink Topaz Deepslate Ore",
+  "block.gemsoftheworld.deepslate_orange_topaz_ore": "Orange Topaz Deepslate Ore",
+  "block.gemsoftheworld.deepslate_colorless_topaz_ore": "Colorless Topaz Deepslate Ore",
+
 
 
   "tooltip.gemsoftheworld.chisel.shift_down": "Press §eShift§r for more Information!",

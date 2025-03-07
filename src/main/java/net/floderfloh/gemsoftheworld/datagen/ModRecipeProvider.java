@@ -48,6 +48,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> BLUES_SMELTABLES = List.of(ModBlocks.BLUE_SPINEL_ORE.get(),
                 ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get());
         List<ItemLike> AQUAMARINE_SMELTABLES = List.of(ModBlocks.AQUAMARINE_ORE.get());
+        List<ItemLike> BLT_SMELTABLES = List.of(ModBlocks.BLUE_TOPAZ_ORE.get(),
+                ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get());
+        List<ItemLike> BRT_SMELTABLES = List.of(ModBlocks.BROWN_TOPAZ_ORE.get(),
+                ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get());
+        List<ItemLike> YT_SMELTABLES = List.of(ModBlocks.YELLOW_TOPAZ_ORE.get(),
+                ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get());
+        List<ItemLike> PT_SMELTABLES = List.of(ModBlocks.PINK_TOPAZ_ORE.get(),
+                ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get());
+        List<ItemLike> OT_SMELTABLES = List.of(ModBlocks.ORANGE_TOPAZ_ORE.get(),
+                ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get());
+        List<ItemLike> CT_SMELTABLES = List.of(ModBlocks.COLORLESS_TOPAZ_ORE.get(),
+                ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get());
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
@@ -171,6 +183,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.AQUAMARINE.get())
                 .unlockedBy(getHasName(ModItems.AQUAMARINE.get()), has(ModItems.AQUAMARINE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.BLUE_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.BLUE_TOPAZ.get()), has(ModItems.BLUE_TOPAZ.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.BROWN_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.BROWN_TOPAZ.get()), has(ModItems.BROWN_TOPAZ.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.YELLOW_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.YELLOW_TOPAZ.get()), has(ModItems.YELLOW_TOPAZ.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.PINK_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.PINK_TOPAZ.get()), has(ModItems.PINK_TOPAZ.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.ORANGE_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.ORANGE_TOPAZ.get()), has(ModItems.ORANGE_TOPAZ.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COLORLESS_TOPAZ_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.COLORLESS_TOPAZ.get())
+                .unlockedBy(getHasName(ModItems.COLORLESS_TOPAZ.get()), has(ModItems.COLORLESS_TOPAZ.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
@@ -265,6 +313,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.AQUAMARINE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.AQUAMARINE_BLOCK.get()), has(ModBlocks.AQUAMARINE_BLOCK.get()))
                 .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":aquamarine_from_aquamarine_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_TOPAZ.get(), 9)
+                .requires(ModBlocks.BLUE_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.BLUE_TOPAZ_BLOCK.get()), has(ModBlocks.BLUE_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":blue_topaz_from_blue_topaz_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BROWN_TOPAZ.get(), 9)
+                .requires(ModBlocks.BROWN_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.BROWN_TOPAZ_BLOCK.get()), has(ModBlocks.BROWN_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":brown_topaz_from_brown_topaz_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_TOPAZ.get(), 9)
+                .requires(ModBlocks.YELLOW_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.YELLOW_TOPAZ_BLOCK.get()), has(ModBlocks.YELLOW_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":yellow_topaz_from_yellow_topaz_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_TOPAZ.get(), 9)
+                .requires(ModBlocks.PINK_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.PINK_TOPAZ_BLOCK.get()), has(ModBlocks.PINK_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":pink_topaz_from_pink_topaz_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ORANGE_TOPAZ.get(), 9)
+                .requires(ModBlocks.ORANGE_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.ORANGE_TOPAZ_BLOCK.get()), has(ModBlocks.ORANGE_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":orange_topaz_from_orange_topaz_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COLORLESS_TOPAZ.get(), 9)
+                .requires(ModBlocks.COLORLESS_TOPAZ_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.COLORLESS_TOPAZ_BLOCK.get()), has(ModBlocks.COLORLESS_TOPAZ_BLOCK.get()))
+                .save(pRecipeOutput, GemsOfTheWorld.MOD_ID + ":colorless_topaz_from_colorless_topaz_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AMBER_BLOCK.get())
                 .pattern("AA")
@@ -302,6 +374,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pRecipeOutput, BLUES_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_SPINEL.get(), 0.4f, 200, "spinel");
         oreSmelting(pRecipeOutput, AQUAMARINE_SMELTABLES, RecipeCategory.MISC, ModItems.AQUAMARINE.get(), 0.8f, 200,"aquamarine");
         oreBlasting(pRecipeOutput, AQUAMARINE_SMELTABLES, RecipeCategory.MISC, ModItems.AQUAMARINE.get(), 0.8f, 100, "aquamarine");
+        oreSmelting(pRecipeOutput, BLT_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, BLT_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_TOPAZ.get(), 0.2f, 100, "topat");
+        oreSmelting(pRecipeOutput, BRT_SMELTABLES, RecipeCategory.MISC, ModItems.BROWN_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, BRT_SMELTABLES, RecipeCategory.MISC, ModItems.BROWN_TOPAZ.get(), 0.2f, 100, "topat");
+        oreSmelting(pRecipeOutput, YT_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, YT_SMELTABLES, RecipeCategory.MISC, ModItems.YELLOW_TOPAZ.get(), 0.2f, 100, "topat");
+        oreSmelting(pRecipeOutput, PT_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, PT_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_TOPAZ.get(), 0.2f, 100, "topat");
+        oreSmelting(pRecipeOutput, OT_SMELTABLES, RecipeCategory.MISC, ModItems.ORANGE_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, OT_SMELTABLES, RecipeCategory.MISC, ModItems.ORANGE_TOPAZ.get(), 0.2f, 100, "topat");
+        oreSmelting(pRecipeOutput, CT_SMELTABLES, RecipeCategory.MISC, ModItems.COLORLESS_TOPAZ.get(), 0.2f, 200,"topaz");
+        oreBlasting(pRecipeOutput, CT_SMELTABLES, RecipeCategory.MISC, ModItems.COLORLESS_TOPAZ.get(), 0.2f, 100, "topat");
+
 
 
 

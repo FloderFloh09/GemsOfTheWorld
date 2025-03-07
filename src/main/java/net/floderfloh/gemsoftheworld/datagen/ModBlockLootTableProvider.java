@@ -49,6 +49,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLUE_SPINEL_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SAPPHIRE.get());
         dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
+        dropSelf(ModBlocks.BLUE_TOPAZ_BLOCK.get());
+        dropSelf(ModBlocks.BROWN_TOPAZ_BLOCK.get());
+        dropSelf(ModBlocks.YELLOW_TOPAZ_BLOCK.get());
+        dropSelf(ModBlocks.PINK_TOPAZ_BLOCK.get());
+        dropSelf(ModBlocks.ORANGE_TOPAZ_BLOCK.get());
+        dropSelf(ModBlocks.COLORLESS_TOPAZ_BLOCK.get());
         dropSelf(ModBlocks.GEM_GRINDSTONE.get());
         dropSelf(ModBlocks.AMBER_BLOCK.get());
         dropSelf(ModBlocks.AMBER_BRICKS.get());
@@ -109,6 +115,31 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get(), ModItems.BONDED_BLACK_SPINEL.get()));
         this.add(ModBlocks.AQUAMARINE_ORE.get(),
                 block -> createOreDrop(ModBlocks.AQUAMARINE_ORE.get(), ModItems.AQUAMARINE.get()));
+        this.add(ModBlocks.BLUE_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLUE_TOPAZ_ORE.get(), ModItems.BONDED_BLUE_TOPAZ.get()));
+        this.add(ModBlocks.BROWN_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.BROWN_TOPAZ_ORE.get(), ModItems.BONDED_BROWN_TOPAZ.get()));
+        this.add(ModBlocks.YELLOW_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.YELLOW_TOPAZ_ORE.get(), ModItems.BONDED_YELLOW_TOPAZ.get()));
+        this.add(ModBlocks.PINK_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.PINK_TOPAZ_ORE.get(), ModItems.BONDED_PINK_TOPAZ.get()));
+        this.add(ModBlocks.ORANGE_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.ORANGE_TOPAZ_ORE.get(), ModItems.BONDED_ORANGE_TOPAZ.get()));
+        this.add(ModBlocks.COLORLESS_TOPAZ_ORE.get(),
+                block -> createOreDrop(ModBlocks.COLORLESS_TOPAZ_ORE.get(), ModItems.BONDED_COLORLESS_TOPAZ.get()));
+        this.add(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_BLUE_TOPAZ.get()));
+        this.add(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_BROWN_TOPAZ.get()));
+        this.add(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_YELLOW_TOPAZ.get()));
+        this.add(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_PINK_TOPAZ.get()));
+        this.add(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_ORANGE_TOPAZ.get()));
+        this.add(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get(),
+                block -> createOreDrop(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get(), ModItems.BONDED_COLORLESS_TOPAZ.get()));
+
 
         dropSelf(ModBlocks.AMBER_WALL.get());
         dropSelf(ModBlocks.AMBER_TRAPDOOR.get());

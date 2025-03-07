@@ -69,7 +69,25 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLACK_SPINEL_ORE.get())
                 .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get())
                 .add(ModBlocks.AQUAMARINE_BLOCK.get())
-                .add(ModBlocks.AQUAMARINE_ORE.get());;
+                .add(ModBlocks.AQUAMARINE_ORE.get())
+                .add(ModBlocks.BLUE_TOPAZ_BLOCK.get())
+                .add(ModBlocks.BROWN_TOPAZ_BLOCK.get())
+                .add(ModBlocks.YELLOW_TOPAZ_BLOCK.get())
+                .add(ModBlocks.PINK_TOPAZ_BLOCK.get())
+                .add(ModBlocks.ORANGE_TOPAZ_BLOCK.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_BLOCK.get())
+                .add(ModBlocks.BLUE_TOPAZ_ORE.get())
+                .add(ModBlocks.BROWN_TOPAZ_ORE.get())
+                .add(ModBlocks.YELLOW_TOPAZ_ORE.get())
+                .add(ModBlocks.PINK_TOPAZ_ORE.get())
+                .add(ModBlocks.ORANGE_TOPAZ_ORE.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_ORE.get())
+                .add(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get());
 
 
 
@@ -100,7 +118,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.PINK_SPINEL_BLOCK.get())
                 .add(ModBlocks.BLUE_SPINEL_BLOCK.get())
                 .add(ModBlocks.BLACK_SPINEL_BLOCK.get())
-                .add(ModBlocks.AQUAMARINE_BLOCK.get());
+                .add(ModBlocks.AQUAMARINE_BLOCK.get())
+                .add(ModBlocks.BLUE_TOPAZ_BLOCK.get())
+                .add(ModBlocks.BROWN_TOPAZ_BLOCK.get())
+                .add(ModBlocks.YELLOW_TOPAZ_BLOCK.get())
+                .add(ModBlocks.PINK_TOPAZ_BLOCK.get())
+                .add(ModBlocks.ORANGE_TOPAZ_BLOCK.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_BLOCK.get());
 
 
 
@@ -129,7 +153,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLUE_SPINEL_DEEPSLATE_ORE.get())
                 .add(ModBlocks.BLACK_SPINEL_ORE.get())
                 .add(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get())
-                .add(ModBlocks.AQUAMARINE_ORE.get());
+                .add(ModBlocks.AQUAMARINE_ORE.get())
+                .add(ModBlocks.BLUE_TOPAZ_ORE.get())
+                .add(ModBlocks.BROWN_TOPAZ_ORE.get())
+                .add(ModBlocks.YELLOW_TOPAZ_ORE.get())
+                .add(ModBlocks.PINK_TOPAZ_ORE.get())
+                .add(ModBlocks.ORANGE_TOPAZ_ORE.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_ORE.get())
+                .add(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get())
+                .add(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get());
 
         tag(BlockTags.FENCES).add(ModBlocks.AMBER_FENCE.get());
 

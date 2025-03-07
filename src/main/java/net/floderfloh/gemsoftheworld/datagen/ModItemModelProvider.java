@@ -54,6 +54,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BLACK_SPINEL.get());
         basicItem(ModItems.AQUAMARINE.get());
         basicItem(ModItems.BONDED_DIAMOND.get());
+        basicItem(ModItems.COLORLESS_TOPAZ.get());
+        basicItem(ModItems.BLUE_TOPAZ.get());
+        basicItem(ModItems.BROWN_TOPAZ.get());
+        basicItem(ModItems.PINK_TOPAZ.get());
+        basicItem(ModItems.YELLOW_TOPAZ.get());
+        basicItem(ModItems.ORANGE_TOPAZ.get());
+        basicItem(ModItems.BONDED_COLORLESS_TOPAZ.get());
+        basicItem(ModItems.BONDED_BROWN_TOPAZ.get());
+        basicItem(ModItems.BONDED_PINK_TOPAZ.get());
+        basicItem(ModItems.BONDED_YELLOW_TOPAZ.get());
+        basicItem(ModItems.BONDED_ORANGE_TOPAZ.get());
+        basicItem(ModItems.BONDED_BLUE_TOPAZ.get());
         basicItem(ModItems.WOOD_CHISEL.get());
         basicItem(ModItems.STONE_CHISEL.get());
         basicItem(ModItems.IRON_CHISEL.get());

@@ -109,6 +109,30 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AQUAMARINE = ITEMS.register("aquamarine",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COLORLESS_TOPAZ = ITEMS.register("colorless_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_TOPAZ = ITEMS.register("blue_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ORANGE_TOPAZ = ITEMS.register("orange_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINK_TOPAZ = ITEMS.register("pink_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_TOPAZ = ITEMS.register("yellow_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BROWN_TOPAZ = ITEMS.register("brown_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_COLORLESS_TOPAZ = ITEMS.register("bonded_colorless_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_BLUE_TOPAZ = ITEMS.register("bonded_blue_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_ORANGE_TOPAZ = ITEMS.register("bonded_orange_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_PINK_TOPAZ = ITEMS.register("bonded_pink_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_YELLOW_TOPAZ = ITEMS.register("bonded_yellow_topaz",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BONDED_BROWN_TOPAZ = ITEMS.register("bonded_brown_topaz",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONDED_DIAMOND = ITEMS.register("bonded_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOD_CHISEL = ITEMS.register("wood_chisel",

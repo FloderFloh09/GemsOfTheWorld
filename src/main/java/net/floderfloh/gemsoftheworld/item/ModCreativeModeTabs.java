@@ -33,6 +33,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLUE_SPINEL.get());
                         output.accept(ModItems.BLACK_SPINEL.get());
                         output.accept(ModItems.AQUAMARINE.get());
+                        output.accept(ModItems.BLUE_TOPAZ.get());
+                        output.accept(ModItems.YELLOW_TOPAZ.get());
+                        output.accept(ModItems.ORANGE_TOPAZ.get());
+                        output.accept(ModItems.PINK_TOPAZ.get());
+                        output.accept(ModItems.BROWN_TOPAZ.get());
+                        output.accept(ModItems.COLORLESS_TOPAZ.get());
 
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
                         output.accept(ModItems.RAW_PINK_GARNET.get());
@@ -53,6 +59,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BONDED_PINK_SPINEL.get());
                         output.accept(ModItems.BONDED_BLUE_SPINEL.get());
                         output.accept(ModItems.BONDED_BLACK_SPINEL.get());
+                        output.accept(ModItems.BONDED_BLUE_TOPAZ.get());
+                        output.accept(ModItems.BONDED_YELLOW_TOPAZ.get());
+                        output.accept(ModItems.BONDED_ORANGE_TOPAZ.get());
+                        output.accept(ModItems.BONDED_PINK_TOPAZ.get());
+                        output.accept(ModItems.BONDED_BROWN_TOPAZ.get());
+                        output.accept(ModItems.BONDED_COLORLESS_TOPAZ.get());
 
 
                         output.accept(ModItems.MINERALS.get());
@@ -86,6 +98,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLUE_SPINEL_BLOCK.get());
                         output.accept(ModBlocks.BLACK_SPINEL_BLOCK.get());
                         output.accept(ModBlocks.AQUAMARINE_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_TOPAZ_BLOCK.get());
+                        output.accept(ModBlocks.BROWN_TOPAZ_BLOCK.get());
+                        output.accept(ModBlocks.YELLOW_TOPAZ_BLOCK.get());
+                        output.accept(ModBlocks.PINK_TOPAZ_BLOCK.get());
+                        output.accept(ModBlocks.ORANGE_TOPAZ_BLOCK.get());
+                        output.accept(ModBlocks.COLORLESS_TOPAZ_BLOCK.get());
 
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.RUBY_DEEPSLATE_ORE.get());
@@ -116,6 +134,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLACK_SPINEL_ORE.get());
                         output.accept(ModBlocks.BLACK_SPINEL_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.AQUAMARINE_ORE.get());
+                        output.accept(ModBlocks.BLUE_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.BROWN_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.YELLOW_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PINK_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.ORANGE_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.COLORLESS_TOPAZ_ORE.get());
+                        output.accept(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE.get());
+
 
 
                         output.accept(ModBlocks.AMBER_DOOR.get());

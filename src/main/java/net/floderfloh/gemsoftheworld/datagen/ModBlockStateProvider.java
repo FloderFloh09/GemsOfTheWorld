@@ -40,6 +40,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLUE_SPINEL_BLOCK);
         blockWithItem(ModBlocks.AQUAMARINE_BLOCK);
         blockWithItem(ModBlocks.AQUAMARINE_ORE);
+        blockWithItem(ModBlocks.BLUE_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.BROWN_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.YELLOW_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.PINK_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.ORANGE_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.COLORLESS_TOPAZ_BLOCK);
+        blockWithItem(ModBlocks.BROWN_TOPAZ_ORE);
+        blockWithItem(ModBlocks.BLUE_TOPAZ_ORE);
+        blockWithItem(ModBlocks.YELLOW_TOPAZ_ORE);
+        blockWithItem(ModBlocks.PINK_TOPAZ_ORE);
+        blockWithItem(ModBlocks.ORANGE_TOPAZ_ORE);
+        blockWithItem(ModBlocks.COLORLESS_TOPAZ_ORE);
+        blockWithItem(ModBlocks.BLUE_TOPAZ_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.BROWN_TOPAZ_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.YELLOW_TOPAZ_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.PINK_TOPAZ_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.ORANGE_TOPAZ_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.COLORLESS_TOPAZ_DEEPSLATE_ORE);
 
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_DEEPSLATE_ORE);
