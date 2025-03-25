@@ -85,6 +85,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.AMBER_TILES_BUTTON, ModBlocks.AMBER_TILES);
 
         simpleBlockItem(ModBlocks.AMBER_DOOR);
+        withExistingParent(ModItems.SLOTH_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SNAIL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))

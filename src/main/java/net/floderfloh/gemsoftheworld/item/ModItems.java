@@ -5,12 +5,14 @@ import net.floderfloh.gemsoftheworld.item.custom.*;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
+import net.floderfloh.gemsoftheworld.entity.ModEntities;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -150,6 +152,10 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_CHISEL = ITEMS.register("netherite_chisel",
             () -> new ChislingItem(Tiers.NETHERITE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4, -2.5f))));
+    public static final RegistryObject<Item> SLOTH_SPAWN_EGG = ITEMS.register("sloth_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SLOTH, 0x53524b, 0xdac741, new Item.Properties()));
+    public static final RegistryObject<Item> SNAIL_SPAWN_EGG = ITEMS.register("snail_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SNAIL, 0x83f21b, 0x3accb1, new Item.Properties()));
 
 
 

@@ -3,7 +3,10 @@ package net.floderfloh.gemsoftheworld;
 import com.mojang.logging.LogUtils;
 import net.floderfloh.gemsoftheworld.block.ModBlocks;
 import net.floderfloh.gemsoftheworld.block.custom.GemGrindStone;
+import net.floderfloh.gemsoftheworld.entity.ModEntities;
+import net.floderfloh.gemsoftheworld.entity.client.SnailRenderer;
 import net.floderfloh.gemsoftheworld.item.ModCreativeModeTabs;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,6 +29,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import net.floderfloh.gemsoftheworld.entity.client.SlothRenderer;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(GemsOfTheWorld.MOD_ID)
@@ -53,6 +57,7 @@ public class GemsOfTheWorld
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -90,6 +95,8 @@ public class GemsOfTheWorld
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.SLOTH.get(),SlothRenderer::new);
+            EntityRenderers.register(ModEntities.SNAIL.get(), SnailRenderer::new);
 
         }
     }
